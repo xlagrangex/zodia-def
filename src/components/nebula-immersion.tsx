@@ -247,14 +247,14 @@ export default function NebulaImmersion() {
             {/* Aurora Boreale Background Effect */}
             <div className="absolute inset-0 -z-10">
               {/* Multiple aurora layers */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#00CCFF]/30 to-transparent blur-xl animate-aurora-wave-1" />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0066FF]/20 via-transparent to-[#00CCFF]/20 blur-2xl animate-aurora-wave-2" />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#0066FF]/40 to-transparent blur-lg animate-aurora-wave-3" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#00CCFF]/20 to-transparent blur-md animate-aurora-wave-1" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0066FF]/15 via-transparent to-[#00CCFF]/15 blur-lg animate-aurora-wave-2" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#0066FF]/25 to-transparent blur-sm animate-aurora-wave-3" />
 
               {/* Horizontal aurora streaks */}
-              <div className="absolute top-1/2 left-0 w-full h-8 bg-gradient-to-r from-transparent via-[#00CCFF]/50 to-transparent blur-md animate-aurora-streak-1" />
-              <div className="absolute top-1/3 left-0 w-full h-6 bg-gradient-to-r from-[#0066FF]/30 via-transparent to-[#00CCFF]/30 blur-lg animate-aurora-streak-2" />
-              <div className="absolute bottom-1/3 left-0 w-full h-10 bg-gradient-to-r from-transparent via-[#0066FF]/40 to-transparent blur-xl animate-aurora-streak-3" />
+              <div className="absolute top-1/2 left-0 w-full h-6 bg-gradient-to-r from-transparent via-[#00CCFF]/30 to-transparent blur-sm animate-aurora-streak-1" />
+              <div className="absolute top-1/3 left-0 w-full h-4 bg-gradient-to-r from-[#0066FF]/20 via-transparent to-[#00CCFF]/20 blur-md animate-aurora-streak-2" />
+              <div className="absolute bottom-1/3 left-0 w-full h-6 bg-gradient-to-r from-transparent via-[#0066FF]/25 to-transparent blur-md animate-aurora-streak-3" />
             </div>
 
             {/* ZODIA Text con effetto neon e alone obliquo */}
@@ -274,9 +274,9 @@ export default function NebulaImmersion() {
           transparent 360deg
         )
       `,
-                  transform: "scale(3) translateX(-30%) translateY(-30%)",
-                  filter: "blur(20px)",
-                  opacity: 0.7,
+                  transform: "scale(2) translateX(-20%) translateY(-20%)",
+                  filter: "blur(10px)",
+                  opacity: 0.5,
                   zIndex: -1,
                 }}
               />
@@ -296,9 +296,9 @@ export default function NebulaImmersion() {
           transparent 360deg
         )
       `,
-                  transform: "scale(5) translateX(-40%) translateY(-40%)",
-                  filter: "blur(40px)",
-                  opacity: 0.5,
+                  transform: "scale(2.5) translateX(-25%) translateY(-25%)",
+                  filter: "blur(15px)",
+                  opacity: 0.3,
                   zIndex: -2,
                 }}
               />
