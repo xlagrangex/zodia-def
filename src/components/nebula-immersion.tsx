@@ -258,7 +258,7 @@ export default function NebulaImmersion() {
             </div>
 
             {/* ZODIA Text con effetto neon e alone obliquo */}
-            <div className="relative font-trajan font-bold" style={{ fontSize: "clamp(3.5rem, 10vw, 8rem)", fontWeight: "700" }}>
+            <div className="relative font-trajan font-semibold" style={{ fontSize: "clamp(3.5rem, 10vw, 8rem)", fontWeight: "600" }}>
               {/* Alone obliquo - fascio di luce diagonale */}
               <div
                 className="absolute inset-0 pointer-events-none"
@@ -446,20 +446,20 @@ export default function NebulaImmersion() {
         >
           <Button
             size="lg"
-            className={`bg-[#0066FF] text-white font-trajan font-bold px-16 py-6 text-xl rounded-full hover:scale-105 transition-all duration-500 shadow-[0_0_20px_#0066FF,0_0_40px_#00CCFF,0_0_60px_#0066FF] hover:shadow-[0_0_30px_#0066FF,0_0_60px_#00CCFF,0_0_90px_#0066FF] animate-immersion-button ${
+            className={`bg-[#0066FF] text-white font-trajan font-semibold px-16 py-6 text-xl rounded-full hover:scale-105 transition-all duration-500 shadow-[0_0_20px_#0066FF,0_0_40px_#00CCFF,0_0_60px_#0066FF] hover:shadow-[0_0_30px_#0066FF,0_0_60px_#00CCFF,0_0_90px_#0066FF] animate-immersion-button ${
               glitchActive ? "animate-glitch-button" : ""
             }`}
-            style={{ fontWeight: "700" }}
+            style={{ fontWeight: "600" }}
           >
             Immerse in Nebula
           </Button>
           <Button
             size="lg"
             variant="outline"
-            className={`border-2 border-[#00CCFF] text-[#00CCFF] font-trajan font-bold px-16 py-6 text-xl rounded-full hover:bg-[#00CCFF]/10 transition-all duration-500 backdrop-blur-sm bg-transparent ${
+            className={`border-2 border-[#00CCFF] text-[#00CCFF] font-trajan font-semibold px-16 py-6 text-xl rounded-full hover:bg-[#00CCFF]/10 transition-all duration-500 backdrop-blur-sm bg-transparent ${
               glitchActive ? "animate-glitch-button" : ""
             }`}
-            style={{ fontWeight: "700" }}
+            style={{ fontWeight: "600" }}
           >
             Stellar Genesis
           </Button>

@@ -70,8 +70,8 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        // Quadrat Serial come font principale
-        trajan: ["var(--font-trajan)", "Quadrat Serial", "system-ui", "sans-serif"],
+        // Inter come font principale (stabile e affidabile)
+        trajan: ["var(--font-trajan)", "Inter", "system-ui", "sans-serif"],
         serif: ["Georgia", "serif"],
         sans: ["Arial", "sans-serif"],
         mono: ["monospace"],
