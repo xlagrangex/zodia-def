@@ -199,7 +199,7 @@ export default function NebulaImmersion() {
       ref={containerRef}
       className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden bg-[#000011] p-4 sm:p-8 md:p-12 lg:p-20"
     >
-      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full z-0" />
+            <canvas ref={canvasRef} className="absolute inset-0 w-full h-full z-0" />
 
       {/* Nebula Overlay Gradients (Parallax Layers) */}
       <div
@@ -220,7 +220,7 @@ export default function NebulaImmersion() {
           <div className="absolute bottom-32 right-16 w-12 h-32 bg-gradient-to-t from-[#FFFF00] via-[#FF6600] to-[#FF0066] opacity-70 animate-glitch-flicker z-10" />
           <div className="absolute top-1/3 right-20 w-8 h-16 bg-gradient-to-b from-[#00CCFF] to-[#0066FF] opacity-60 animate-glitch-flicker z-10" />
         </>
-      )}
+              )}
 
       {/* Energy Waves */}
       {[...Array(3)].map((_, i) => (
@@ -241,180 +241,63 @@ export default function NebulaImmersion() {
       ))}
 
       {/* Main Content */}
-      <div className="text-center z-20 max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12 lg:px-20">
-        <div className="mb-12 relative">
-          <h1 className="relative mb-6 animate-nebula-title">
-            {/* Aurora Boreale Background Effect */}
-            <div className="absolute inset-0 -z-10">
-              {/* Multiple aurora layers */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#00CCFF]/20 to-transparent blur-md animate-aurora-wave-1" />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0066FF]/15 via-transparent to-[#00CCFF]/15 blur-lg animate-aurora-wave-2" />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#0066FF]/25 to-transparent blur-sm animate-aurora-wave-3" />
+              <div className="text-center z-20 max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12 lg:px-20">
 
-              {/* Horizontal aurora streaks */}
-              <div className="absolute top-1/2 left-0 w-full h-6 bg-gradient-to-r from-transparent via-[#00CCFF]/30 to-transparent blur-sm animate-aurora-streak-1" />
-              <div className="absolute top-1/3 left-0 w-full h-4 bg-gradient-to-r from-[#0066FF]/20 via-transparent to-[#00CCFF]/20 blur-md animate-aurora-streak-2" />
-              <div className="absolute bottom-1/3 left-0 w-full h-6 bg-gradient-to-r from-transparent via-[#0066FF]/25 to-transparent blur-md animate-aurora-streak-3" />
-            </div>
-
-            {/* ZODIA Text con effetto neon e alone obliquo */}
-            <div className="relative font-trajan font-semibold" style={{ fontSize: "clamp(3.5rem, 10vw, 8rem)", fontWeight: "600" }}>
-              {/* Alone obliquo - fascio di luce diagonale */}
-              <div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                  background: `
-        conic-gradient(
-          from 225deg at 50% 50%,
-          transparent 0deg,
-          rgba(0, 102, 255, 0.4) 30deg,
-          rgba(0, 204, 255, 0.6) 45deg,
-          rgba(0, 102, 255, 0.4) 60deg,
-          transparent 90deg,
-          transparent 360deg
-        )
-      `,
-                  transform: "scale(2) translateX(-20%) translateY(-20%)",
-                  filter: "blur(10px)",
-                  opacity: 0.5,
-                  zIndex: -1,
-                }}
-              />
-
-              {/* Fascio di luce secondario più ampio */}
-              <div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                  background: `
-        conic-gradient(
-          from 225deg at 50% 50%,
-          transparent 0deg,
-          rgba(0, 102, 255, 0.2) 20deg,
-          rgba(0, 204, 255, 0.3) 45deg,
-          rgba(0, 102, 255, 0.2) 70deg,
-          transparent 90deg,
-          transparent 360deg
-        )
-      `,
-                  transform: "scale(2.5) translateX(-25%) translateY(-25%)",
-                  filter: "blur(15px)",
-                  opacity: 0.3,
-                  zIndex: -2,
-                }}
-              />
-
-              {/* Z - Azzurrina Corsiva con effetto neon potenziato */}
-              <span
-                className="inline-block animate-pulsate relative"
-                style={{
-                  color: "#00CCFF",
-                  fontStyle: "italic",
-                  textShadow: `
-        0 0 5px #00CCFF,
-        0 0 10px #00CCFF,
-        0 0 15px #00CCFF,
-        0 0 20px #00CCFF,
-        0 0 35px #00CCFF,
-        0 0 40px #00CCFF,
-        -10px -10px 30px rgba(0, 204, 255, 0.5),
-        -15px -15px 40px rgba(0, 204, 255, 0.3),
-        -20px -20px 50px rgba(0, 204, 255, 0.2)
-      `,
-                  filter:
-                    "drop-shadow(0 0 15px #00CCFF) drop-shadow(0 0 25px #00CCFF) drop-shadow(-10px -10px 20px rgba(0, 204, 255, 0.4))",
-                  WebkitTextStroke: "3px #00CCFF",
-                }}
-              >
-                Z
-              </span>
-
-              {/* ODIA - Blu Dritte con effetto neon potenziato */}
-              <span
-                className="inline-block animate-pulsate relative"
-                style={{
-                  color: "#0066FF",
-                  fontStyle: "normal",
-                  textShadow: `
-        0 0 5px #0066FF,
-        0 0 10px #0066FF,
-        0 0 15px #0066FF,
-        0 0 20px #0066FF,
-        0 0 35px #0066FF,
-        0 0 40px #0066FF,
-        -10px -10px 30px rgba(0, 102, 255, 0.5),
-        -15px -15px 40px rgba(0, 102, 255, 0.3),
-        -20px -20px 50px rgba(0, 102, 255, 0.2)
-      `,
-                  filter:
-                    "drop-shadow(0 0 15px #0066FF) drop-shadow(0 0 25px #0066FF) drop-shadow(-10px -10px 20px rgba(0, 102, 255, 0.4))",
-                  WebkitTextStroke: "3px #0066FF",
-                }}
-              >
-                ODIA
-              </span>
-
-              {/* Glitch overlay layers */}
+              <div className="mb-12 relative">
+            
+            {/* Immagine ZODIA */}
+            <div className="flex justify-center mt-8 relative">
+              <div className="oblique-glow">
+                <img 
+                  src="/zodiap.png" 
+                  alt="ZODIA Image" 
+                  className="max-w-[300px] md:max-w-[400px] lg:max-w-[500px] animate-pulsate relative z-10"
+                  style={{
+                    filter: "drop-shadow(0 0 8px #0202A5) drop-shadow(0 0 16px #0202A5) drop-shadow(0 0 24px #0202A5) drop-shadow(0 0 32px #0202A5) drop-shadow(0 0 40px #0202A5)",
+                  }}
+                />
+              </div>
+              
+              {/* Glitch overlay layers per l'immagine */}
               {glitchActive && (
                 <>
-                  <span
-                    className="absolute inset-0 animate-glitch-red"
+                  <img 
+                    src="/zodiap.png" 
+                    alt="ZODIA Image Glitch Red" 
+                    className="absolute max-w-[300px] md:max-w-[400px] lg:max-w-[500px] animate-glitch-red"
                     style={{
-                      color: "#FF0066",
+                      filter: "drop-shadow(0 0 15px #FF0066) drop-shadow(0 0 30px #FF0066)",
                       transform: "translateX(-2px)",
                       opacity: 0.7,
                       mixBlendMode: "screen",
+                      zIndex: 9,
                     }}
-                  >
-                    <span style={{ fontStyle: "italic" }}>Z</span>ODIA
-                  </span>
-                  <span
-                    className="absolute inset-0 animate-glitch-cyan"
+                  />
+                  <img 
+                    src="/zodiap.png" 
+                    alt="ZODIA Image Glitch Cyan" 
+                    className="absolute max-w-[300px] md:max-w-[400px] lg:max-w-[500px] animate-glitch-cyan"
                     style={{
-                      color: "#00FFFF",
+                      filter: "drop-shadow(0 0 15px #00FFFF) drop-shadow(0 0 30px #00FFFF)",
                       transform: "translateX(2px)",
                       opacity: 0.7,
                       mixBlendMode: "screen",
-                    }}
-                  >
-                    <span style={{ fontStyle: "italic" }}>Z</span>ODIA
-                  </span>
-                </>
-              )}
-
-              {/* Scanlines overlay */}
-              <div className="absolute inset-0 pointer-events-none">
-                <div className="w-full h-full bg-gradient-to-b from-transparent via-[rgba(0,255,255,0.03)] to-transparent animate-scanlines" />
-              </div>
-            </div>
-
-            {/* Light Slash Effect (creating portals) */}
-            {showSlash && (
-              <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-0 left-0 w-full h-full animate-light-slash-portal">
-                  <div
-                    className="absolute w-[3px] h-full bg-white shadow-[0_0_8px_#00CCFF] transform -rotate-45 origin-top-left"
-                    style={{
-                      background: "linear-gradient(to bottom, transparent, #FFFFFF, transparent)",
-                      width: "3px",
-                      height: "150%",
-                      left: "-50%",
-                      top: "-25%",
+                      zIndex: 8,
                     }}
                   />
-                </div>
-              </div>
-            )}
-          </h1>
+                </>
+              )}
+            </div>
 
           <p
             className="font-trajan font-medium text-[#E6F3FF] tracking-[0.4em] animate-fade-in-stagger mb-4"
             style={{ fontSize: "clamp(1.2rem, 3vw, 2rem)", animationDelay: "0.2s", fontWeight: "500" }}
           >
             NEBULA IMMERSION
-          </p>
-          <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#00CCFF] to-transparent mx-auto animate-line-glow" />
+                      </p>
+            <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#00CCFF] to-transparent mx-auto animate-line-glow" />
 
-          {/* Light Slash Effect (creating portals) */}
+            {/* Light Slash Effect (creating portals) */}
           {showSlash && (
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
               <div className="absolute top-0 left-0 w-full h-full animate-light-slash-portal">
@@ -480,196 +363,7 @@ export default function NebulaImmersion() {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes pulsate {
-          0%, 100% { opacity: 0.7; }
-          50% { opacity: 1.0; }
-        }
-        @keyframes light-slash-portal {
-          0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-          100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        }
-        @keyframes fade-in-stagger {
-          0% { opacity: 0; transform: translateY(20px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes energy-wave {
-          0% { 
-            transform: translate(-50%, -50%) scale(0.5);
-            opacity: 0.8;
-          }
-          50% { 
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 0.4;
-          }
-          100% { 
-            transform: translate(-50%, -50%) scale(1.5);
-            opacity: 0;
-          }
-        }
-        @keyframes nebula-title {
-          0%, 100% { 
-            transform: scale(1);
-          }
-          50% { 
-            transform: scale(1.02);
-          }
-        }
-        @keyframes line-glow {
-          0%, 100% { 
-            box-shadow: 0 0 10px #00CCFF;
-            transform: scaleX(1);
-          }
-          50% { 
-            box-shadow: 0 0 30px #00CCFF, 0 0 50px #0066FF;
-            transform: scaleX(1.2);
-          }
-        }
-        @keyframes immersion-button {
-          0%, 100% { 
-            transform: translateY(0px) scale(1);
-            box-shadow: 0 0 40px #0066FF;
-          }
-          50% { 
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 0 60px #0066FF, 0 0 80px #00CCFF;
-          }
-        }
-        @keyframes depth-pulse {
-          0%, 100% { 
-            transform: scale(1);
-            opacity: 0.6;
-          }
-          50% { 
-            transform: scale(1.5);
-            opacity: 1;
-          }
-        }
-        @keyframes glitch-flicker {
-          0%, 100% { opacity: 0.8; transform: translateX(0); }
-          25% { opacity: 0.4; transform: translateX(-2px); }
-          50% { opacity: 0.9; transform: translateX(2px); }
-          75% { opacity: 0.3; transform: translateX(-1px); }
-        }
-        @keyframes glitch-text {
-          0%, 100% { transform: translateX(0); }
-          20% { transform: translateX(-2px); }
-          40% { transform: translateX(2px); }
-          60% { transform: translateX(-1px); }
-          80% { transform: translateX(1px); }
-        }
-        @keyframes glitch-red {
-          0%, 100% { transform: translateX(-2px); opacity: 0.7; }
-          50% { transform: translateX(-4px); opacity: 0.4; }
-        }
-        @keyframes glitch-cyan {
-          0%, 100% { transform: translateX(2px); opacity: 0.7; }
-          50% { transform: translateX(4px); opacity: 0.4; }
-        }
-        @keyframes scanlines {
-          0% { transform: translateY(-100%); }
-          100% { transform: translateY(100vh); }
-        }
-        @keyframes aurora-wave-1 {
-          0%, 100% { 
-            transform: translateX(-20%) scaleY(0.8);
-            opacity: 0.3;
-          }
-          50% { 
-            transform: translateX(20%) scaleY(1.2);
-            opacity: 0.6;
-          }
-        }
-        @keyframes aurora-wave-2 {
-          0%, 100% { 
-            transform: translateX(15%) scaleY(1.1);
-            opacity: 0.2;
-          }
-          50% { 
-            transform: translateX(-15%) scaleY(0.9);
-            opacity: 0.4;
-          }
-        }
-        @keyframes aurora-wave-3 {
-          0%, 100% { 
-            transform: translateX(-10%) scaleY(0.9);
-            opacity: 0.4;
-          }
-          50% { 
-            transform: translateX(10%) scaleY(1.3);
-            opacity: 0.7;
-          }
-        }
-        @keyframes aurora-streak-1 {
-          0%, 100% { 
-            transform: translateX(-30%) scaleX(0.8);
-            opacity: 0.5;
-          }
-          50% { 
-            transform: translateX(30%) scaleX(1.2);
-            opacity: 0.8;
-          }
-        }
-        @keyframes aurora-streak-2 {
-          0%, 100% { 
-            transform: translateX(25%) scaleX(1.1);
-            opacity: 0.3;
-          }
-          50% { 
-            transform: translateX(-25%) scaleX(0.9);
-            opacity: 0.6;
-          }
-        }
-        @keyframes aurora-streak-3 {
-          0%, 100% { 
-            transform: translateX(-20%) scaleX(0.7);
-            opacity: 0.4;
-          }
-          50% { 
-            transform: translateX(20%) scaleX(1.4);
-            opacity: 0.7;
-          }
-        }
-        @keyframes glitch-button {
-          0%, 100% { 
-            transform: translateY(0px) scale(1);
-            filter: hue-rotate(0deg);
-          }
-          25% { 
-            transform: translateY(-2px) scale(0.98);
-            filter: hue-rotate(90deg);
-          }
-          50% { 
-            transform: translateY(1px) scale(1.02);
-            filter: hue-rotate(180deg);
-          }
-          75% { 
-            transform: translateY(-1px) scale(0.99);
-            filter: hue-rotate(270deg);
-          }
-        }
 
-        .animate-pulsate { animation: pulsate 2s ease-in-out infinite alternate; }
-        .animate-light-slash-portal { animation: light-slash-portal 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
-        .animate-fade-in-stagger { animation: fade-in-stagger 1s ease-out forwards; opacity: 0; }
-        .animate-energy-wave { animation: energy-wave 8s ease-out infinite; }
-        .animate-nebula-title { animation: nebula-title 5s ease-in-out infinite; }
-        .animate-line-glow { animation: line-glow 3s ease-in-out infinite; }
-        .animate-immersion-button { animation: immersion-button 6s ease-in-out infinite; }
-        .animate-depth-pulse { animation: depth-pulse 2s ease-in-out infinite; }
-        .animate-glitch-flicker { animation: glitch-flicker 0.15s ease-in-out; }
-        .animate-glitch-text { animation: glitch-text 0.15s ease-in-out; }
-        .animate-glitch-red { animation: glitch-red 0.15s ease-in-out; }
-        .animate-glitch-cyan { animation: glitch-cyan 0.15s ease-in-out; }
-        .animate-scanlines { animation: scanlines 2s linear infinite; }
-        .animate-aurora-wave-1 { animation: aurora-wave-1 8s ease-in-out infinite; }
-        .animate-aurora-wave-2 { animation: aurora-wave-2 6s ease-in-out infinite; }
-        .animate-aurora-wave-3 { animation: aurora-wave-3 10s ease-in-out infinite; }
-        .animate-aurora-streak-1 { animation: aurora-streak-1 7s ease-in-out infinite; }
-        .animate-aurora-streak-2 { animation: aurora-streak-2 9s ease-in-out infinite; }
-        .animate-aurora-streak-3 { animation: aurora-streak-3 5s ease-in-out infinite; }
-        .animate-glitch-button { animation: glitch-button 0.15s ease-in-out; }
-      `}</style>
     </div>
   )
 }

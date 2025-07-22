@@ -156,7 +156,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-[hsl(var(--border))] outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
@@ -165,3 +165,220 @@
     font-family: 'Quadrat Serial', system-ui, sans-serif;
   }
 }
+
+/* Nebula Immersion Animations */
+@keyframes pulsate {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1.0; }
+}
+
+@keyframes light-slash-portal {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+@keyframes fade-in-stagger {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes energy-wave {
+  0% { 
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.8;
+  }
+  50% { 
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.4;
+  }
+  100% { 
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes nebula-title {
+  0%, 100% { 
+    transform: scale(1);
+  }
+  50% { 
+    transform: scale(1.02);
+  }
+}
+
+@keyframes line-glow {
+  0%, 100% { 
+    box-shadow: 0 0 10px #00CCFF;
+    transform: scaleX(1);
+  }
+  50% { 
+    box-shadow: 0 0 30px #00CCFF, 0 0 50px #0066FF;
+    transform: scaleX(1.2);
+  }
+}
+
+@keyframes immersion-button {
+  0%, 100% { 
+    transform: translateY(0px) scale(1);
+    box-shadow: 0 0 40px #0066FF;
+  }
+  50% { 
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 0 60px #0066FF, 0 0 80px #00CCFF;
+  }
+}
+
+@keyframes depth-pulse {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% { 
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
+@keyframes glitch-flicker {
+  0%, 100% { opacity: 0.8; transform: translateX(0); }
+  25% { opacity: 0.4; transform: translateX(-2px); }
+  50% { opacity: 0.9; transform: translateX(2px); }
+  75% { opacity: 0.3; transform: translateX(-1px); }
+}
+
+@keyframes glitch-text {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+  40% { transform: translateX(2px); }
+  60% { transform: translateX(-1px); }
+  80% { transform: translateX(1px); }
+}
+
+@keyframes glitch-red {
+  0%, 100% { transform: translateX(-2px); opacity: 0.7; }
+  50% { transform: translateX(-4px); opacity: 0.4; }
+}
+
+@keyframes glitch-cyan {
+  0%, 100% { transform: translateX(2px); opacity: 0.7; }
+  50% { transform: translateX(4px); opacity: 0.4; }
+}
+
+@keyframes scanlines {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes aurora-wave-1 {
+  0%, 100% { 
+    transform: translateX(-20%) scaleY(0.8);
+    opacity: 0.3;
+  }
+  50% { 
+    transform: translateX(20%) scaleY(1.2);
+    opacity: 0.6;
+  }
+}
+
+@keyframes aurora-wave-2 {
+  0%, 100% { 
+    transform: translateX(15%) scaleY(1.1);
+    opacity: 0.2;
+  }
+  50% { 
+    transform: translateX(-15%) scaleY(0.9);
+    opacity: 0.4;
+  }
+}
+
+@keyframes aurora-wave-3 {
+  0%, 100% { 
+    transform: translateX(-10%) scaleY(0.9);
+    opacity: 0.4;
+  }
+  50% { 
+    transform: translateX(10%) scaleY(1.3);
+    opacity: 0.7;
+  }
+}
+
+@keyframes aurora-streak-1 {
+  0%, 100% { 
+    transform: translateX(-30%) scaleX(0.8);
+    opacity: 0.5;
+  }
+  50% { 
+    transform: translateX(30%) scaleX(1.2);
+    opacity: 0.8;
+  }
+}
+
+@keyframes aurora-streak-2 {
+  0%, 100% { 
+    transform: translateX(25%) scaleX(1.1);
+    opacity: 0.3;
+  }
+  50% { 
+    transform: translateX(-25%) scaleX(0.9);
+    opacity: 0.6;
+  }
+}
+
+@keyframes aurora-streak-3 {
+  0%, 100% { 
+    transform: translateX(-20%) scaleX(0.7);
+    opacity: 0.4;
+  }
+  50% { 
+    transform: translateX(20%) scaleX(1.4);
+    opacity: 0.7;
+  }
+}
+
+@keyframes glitch-button {
+  0%, 100% { 
+    transform: translateY(0px) scale(1);
+    filter: hue-rotate(0deg);
+  }
+  25% { 
+    transform: translateY(-2px) scale(0.98);
+    filter: hue-rotate(90deg);
+  }
+  50% { 
+    transform: translateY(1px) scale(1.02);
+    filter: hue-rotate(180deg);
+  }
+  75% { 
+    transform: translateY(-1px) scale(0.99);
+    filter: hue-rotate(270deg);
+  }
+}
+
+/* Animation Classes */
+.animate-pulsate { animation: pulsate 2s ease-in-out infinite alternate; }
+.animate-light-slash-portal { animation: light-slash-portal 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+.animate-fade-in-stagger { animation: fade-in-stagger 1s ease-out forwards; opacity: 0; }
+.animate-energy-wave { animation: energy-wave 8s ease-out infinite; }
+.animate-nebula-title { animation: nebula-title 5s ease-in-out infinite; }
+.animate-line-glow { animation: line-glow 3s ease-in-out infinite; }
+.animate-immersion-button { animation: immersion-button 6s ease-in-out infinite; }
+.animate-depth-pulse { animation: depth-pulse 2s ease-in-out infinite; }
+.animate-glitch-flicker { animation: glitch-flicker 0.15s ease-in-out; }
+.animate-glitch-text { animation: glitch-text 0.15s ease-in-out; }
+.animate-glitch-red { animation: glitch-red 0.15s ease-in-out; }
+.animate-glitch-cyan { animation: glitch-cyan 0.15s ease-in-out; }
+.animate-scanlines { animation: scanlines 2s linear infinite; }
+.animate-aurora-wave-1 { animation: aurora-wave-1 8s ease-in-out infinite; }
+.animate-aurora-wave-2 { animation: aurora-wave-2 6s ease-in-out infinite; }
+.animate-aurora-wave-3 { animation: aurora-wave-3 10s ease-in-out infinite; }
+.animate-aurora-streak-1 { animation: aurora-streak-1 7s ease-in-out infinite; }
+.animate-aurora-streak-2 { animation: aurora-streak-2 9s ease-in-out infinite; }
+.animate-aurora-streak-3 { animation: aurora-streak-3 5s ease-in-out infinite; }
+.animate-glitch-button { animation: glitch-button 0.15s ease-in-out; }
+
+/* Simple glow effect for ZODIA image */
+.oblique-glow {
+  position: relative;
+}
+
+
