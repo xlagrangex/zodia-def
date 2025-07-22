@@ -7,7 +7,7 @@ export default function NebulaImmersion() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const [showSlash, setShowSlash] = useState(false)
-  const [glitchActive, setGlitchActive] = useState(false)
+  const [glitchActive, setGlitchActive] = useState(true)
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -162,18 +162,10 @@ export default function NebulaImmersion() {
       return () => clearTimeout(timeout)
     }, 4500) // Ogni 4.5 secondi
 
-    // Glitch effect timer
-    const glitchTimer = setInterval(() => {
-      setGlitchActive(true)
-      const timeout = setTimeout(() => setGlitchActive(false), 150) // Durata glitch 150ms
-      return () => clearTimeout(timeout)
-    }, 3000) // Ogni 3 secondi
-
     return () => {
       cancelAnimationFrame(animationId)
       window.removeEventListener("resize", setCanvasSize)
       clearInterval(slashTimer)
-      clearInterval(glitchTimer)
     }
   }, [])
 
