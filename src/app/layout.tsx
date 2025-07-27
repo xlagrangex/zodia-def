@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   title: "ZODIA - Nebula Immersion",
   description: "Dive deep into the cosmic nebula where stellar formations birth the future of decentralized astrology.",
   icons: {
-    icon: "/ornir.png?v=999",
-    shortcut: "/ornir.png?v=999",
-    apple: "/ornir.png?v=999",
+    icon: "/faviconzodia.svg",
+    shortcut: "/faviconzodia.svg",
+    apple: "/faviconzodia.svg",
   },
   openGraph: {
     title: "ZODIA - Nebula Immersion",
@@ -53,10 +53,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
-        <link rel="icon" href="/favicon.ico?v=999" />
-        <link rel="icon" type="image/png" href="/ornir.png?v=999" />
-        <link rel="shortcut icon" href="/ornir.png?v=999" />
-        <link rel="apple-touch-icon" href="/ornir.png?v=999" />
+        <link rel="icon" type="image/svg+xml" href="/faviconzodia.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/faviconzodia.svg" />
+        <link rel="apple-touch-icon" href="/faviconzodia.svg" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
