@@ -52,11 +52,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <head>
-        <link rel="icon" type="image/svg+xml" href="/faviconzodia.svg" />
-        <link rel="shortcut icon" href="/faviconzodia.svg" />
-        <link rel="apple-touch-icon" href="/faviconzodia.svg" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning={true}
