@@ -20,6 +20,29 @@ export const metadata: Metadata = {
     shortcut: "/ornir.png?v=2",
     apple: "/ornir.png?v=2",
   },
+  openGraph: {
+    title: "ZODIA - Nebula Immersion",
+    description: "Dive deep into the cosmic nebula where stellar formations birth the future of decentralized astrology.",
+    url: "https://zodia-def.vercel.app",
+    siteName: "ZODIA",
+    images: [
+      {
+        url: "/ZODIA-BANNER-Dexscreen-1500x500px.png",
+        width: 1500,
+        height: 500,
+        alt: "ZODIA - Nebula Immersion Banner",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ZODIA - Nebula Immersion",
+    description: "Dive deep into the cosmic nebula where stellar formations birth the future of decentralized astrology.",
+    images: ["/ZODIA-BANNER-Dexscreen-1500x500px.png"],
+    creator: "@zodia_project",
+  },
 };
 
 export default function RootLayout({
