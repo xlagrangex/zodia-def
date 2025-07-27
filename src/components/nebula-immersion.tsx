@@ -3,13 +3,20 @@
 import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
 
-export default function NebulaImmersion() {
+function NebulaImmersionContent() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const [showSlash, setShowSlash] = useState(false)
   const [glitchActive, setGlitchActive] = useState(false)
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isClient) return
+    
     const canvas = canvasRef.current
     if (!canvas) return
 
@@ -175,7 +182,7 @@ export default function NebulaImmersion() {
       clearInterval(slashTimer)
       clearInterval(glitchTimer)
     }
-  }, [])
+  }, [isClient, glitchActive])
 
   // Parallax effect
   useEffect(() => {
@@ -366,4 +373,8 @@ export default function NebulaImmersion() {
 
     </div>
   )
+}
+
+export default function NebulaImmersion() {
+  return <NebulaImmersionContent />
 }
