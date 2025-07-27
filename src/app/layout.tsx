@@ -54,7 +54,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning={true}>
       <head>
         <link rel="icon" type="image/svg+xml" href="/faviconzodia.svg" />
-        <link rel="icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/faviconzodia.svg" />
         <link rel="apple-touch-icon" href="/faviconzodia.svg" />
       </head>
