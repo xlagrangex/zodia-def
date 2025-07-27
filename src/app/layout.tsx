@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ZODIA - Nebula Immersion",
   description: "Dive deep into the cosmic nebula where stellar formations birth the future of decentralized astrology.",
+  icons: {
+    icon: "/ornir.png",
+    shortcut: "/ornir.png",
+    apple: "/ornir.png",
+  },
 };
 
 export default function RootLayout({
