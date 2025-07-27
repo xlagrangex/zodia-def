@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   title: "ZODIA - Nebula Immersion",
   description: "Dive deep into the cosmic nebula where stellar formations birth the future of decentralized astrology.",
   icons: {
-    icon: "/ornir.png",
-    shortcut: "/ornir.png",
-    apple: "/ornir.png",
+    icon: "/ornir.png?v=1",
+    shortcut: "/ornir.png?v=1",
+    apple: "/ornir.png?v=1",
   },
 };
 
