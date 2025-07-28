@@ -243,7 +243,7 @@ function NebulaImmersionContent() {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden p-4 sm:p-8 md:p-12 lg:p-20 transition-all duration-150"
+      className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden p-4 sm:p-8 md:p-12 lg:p-20 pb-20 transition-all duration-150"
               style={{
           backgroundColor: glitchActive ? "#211440" : backgroundColor,
           backgroundImage: glitchActive ? "url('/glitchbg.png')" : "none",
