@@ -69,15 +69,8 @@ function NebulaImmersionContent() {
     let time = 0
 
     const animate = () => {
-      if (glitchActive) {
-        // Fill with very dark purple background during glitch
-        ctx.fillStyle = "rgba(5, 0, 20, 0.9)"
-        ctx.fillRect(0, 0, canvas.width, canvas.height)
-      } else {
-        // Normal background
-        ctx.fillStyle = "rgba(0, 0, 17, 1)" // Clear completely without fade
-        ctx.fillRect(0, 0, canvas.width, canvas.height)
-      }
+      ctx.fillStyle = "rgba(0, 0, 17, 1)" // Clear completely without fade
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
 
       time += 0.01
 
@@ -218,9 +211,9 @@ function NebulaImmersionContent() {
       const timeout = setTimeout(() => {
         console.log("Deactivating glitch effect") // Debug
         setGlitchActive(false)
-      }, 600) // Durata glitch 600ms
+      }, 800) // Durata glitch 800ms
       return () => clearTimeout(timeout)
-    }, 4000) // Ogni 4 secondi
+    }, 4000) // Ogni 4 secondi - più frequente
 
     return () => {
       cancelAnimationFrame(animationId)
@@ -250,16 +243,16 @@ function NebulaImmersionContent() {
   return (
     <div
       ref={containerRef}
-              className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden p-4 sm:p-8 md:p-12 lg:p-20 transition-all duration-150 bg-[#000011]"
-        style={{
-          backgroundColor: glitchActive ? "#000000" : "#000011",
+      className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden p-4 sm:p-8 md:p-12 lg:p-20 transition-all duration-150"
+              style={{
+          backgroundColor: glitchActive ? "#211440" : backgroundColor,
           backgroundImage: glitchActive ? "url('/glitchbg.png')" : "none",
           backgroundSize: glitchActive ? "cover" : "auto",
           backgroundPosition: glitchActive ? "center" : "auto",
           backgroundRepeat: glitchActive ? "no-repeat" : "repeat"
         }}
     >
-            <canvas ref={canvasRef} className="absolute inset-0 w-full h-full z-0" style={{ zIndex: 0 }} />
+            <canvas ref={canvasRef} className="absolute inset-0 w-full h-full z-0" />
 
       {/* Nebula Overlay Gradients (Parallax Layers) */}
       <div
@@ -316,6 +309,7 @@ function NebulaImmersionContent() {
                     filter: glitchActive ? "none" : "drop-shadow(0 0 8px #0202A5) drop-shadow(0 0 16px #0202A5) drop-shadow(0 0 24px #0202A5) drop-shadow(0 0 32px #0202A5) drop-shadow(0 0 40px #0202A5)",
                     zIndex: 50,
                     position: "relative",
+                    transform: glitchActive ? "skew(30deg, 0deg)" : "skew(0deg, 0deg)",
                   }}
                 />
               </div>
@@ -329,7 +323,7 @@ function NebulaImmersionContent() {
                     className="absolute max-w-[300px] md:max-w-[400px] lg:max-w-[500px] animate-glitch-red"
                     style={{
                       filter: "none",
-                      transform: "translateX(-2px)",
+                      transform: "translateX(-2px) skew(30deg, 0deg)",
                       opacity: 0.7,
                       mixBlendMode: "screen",
                       zIndex: 51,
@@ -342,7 +336,7 @@ function NebulaImmersionContent() {
                     className="absolute max-w-[300px] md:max-w-[400px] lg:max-w-[500px] animate-glitch-cyan"
                     style={{
                       filter: "none",
-                      transform: "translateX(2px)",
+                      transform: "translateX(2px) skew(30deg, 0deg)",
                       opacity: 0.7,
                       mixBlendMode: "screen",
                       zIndex: 50,
