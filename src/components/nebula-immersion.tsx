@@ -9,10 +9,21 @@ function NebulaImmersionContent() {
   const [showSlash, setShowSlash] = useState(false)
   const [glitchActive, setGlitchActive] = useState(false)
   const [isClient, setIsClient] = useState(false)
+  const [backgroundColor, setBackgroundColor] = useState("#000011")
 
   useEffect(() => {
     setIsClient(true)
   }, [])
+
+  // Cambia il colore di sfondo durante l'effetto glitch
+  useEffect(() => {
+    console.log("Glitch state changed:", glitchActive) // Debug
+    if (glitchActive) {
+      setBackgroundColor("#211440")
+    } else {
+      setBackgroundColor("#000011")
+    }
+  }, [glitchActive])
 
   useEffect(() => {
     if (!isClient) return
@@ -58,8 +69,15 @@ function NebulaImmersionContent() {
     let time = 0
 
     const animate = () => {
-      ctx.fillStyle = "rgba(0, 0, 17, 1)" // Clear completely without fade
-      ctx.fillRect(0, 0, canvas.width, canvas.height)
+      if (glitchActive) {
+        // Fill with very dark purple background during glitch
+        ctx.fillStyle = "rgba(5, 0, 20, 0.9)"
+        ctx.fillRect(0, 0, canvas.width, canvas.height)
+      } else {
+        // Normal background
+        ctx.fillStyle = "rgba(0, 0, 17, 1)" // Clear completely without fade
+        ctx.fillRect(0, 0, canvas.width, canvas.height)
+      }
 
       time += 0.01
 
@@ -112,9 +130,6 @@ function NebulaImmersionContent() {
         }
 
         // Draw particle with reduced glow
-        ctx.beginPath()
-        ctx.arc(x2d, y2d, size, 0, Math.PI * 2)
-
         const alpha = Math.max(0, 0.8 - particle.z / 1000) // Reduced max opacity
         let particleColor = particle.color
 
@@ -124,11 +139,38 @@ function NebulaImmersionContent() {
           particleColor = glitchColors[Math.floor(Math.random() * glitchColors.length)]
         }
 
-        ctx.fillStyle = particleColor.replace(")", `, ${alpha})`)
-        ctx.shadowBlur = 10 * scale // Reduced shadow blur
-        ctx.shadowColor = particleColor
-        ctx.fill()
-        ctx.shadowBlur = 0
+        // Instant transition: either ASCII or particles based on glitch state
+        if (glitchActive) {
+          // ASCII rain effect during glitch - instant transition
+          const asciiChars = ["0", "1", "Z", "O", "D", "I", "A", "█", "▓", "▒", "░", "│", "─"]
+          
+          // Create rain effect - characters falling from top to bottom
+          for (let i = 0; i < 5; i++) {
+            const randomChar = asciiChars[Math.floor(Math.random() * asciiChars.length)]
+            const rainX = x2d + (Math.random() - 0.5) * 30
+            const rainY = y2d + (Math.random() * 100) - 50 // Spread vertically for rain effect
+            
+            // Dimensione variabile per ogni carattere - più piccoli
+            const fontSize = Math.max(4, Math.random() * 12 + 3) // Tra 3px e 15px
+            ctx.font = `${fontSize}px monospace`
+            ctx.fillStyle = `rgba(0, 0, 217, ${alpha * 0.9})` // #0000D9 blu - meno opaco
+            ctx.textAlign = "center"
+            ctx.textBaseline = "middle"
+            ctx.shadowBlur = 2 * scale
+            ctx.shadowColor = "rgba(0, 0, 217, 0.4)"
+            ctx.fillText(randomChar, rainX, rainY)
+          }
+          ctx.shadowBlur = 0
+        } else {
+          // Normal particle drawing - instant transition
+          ctx.beginPath()
+          ctx.arc(x2d, y2d, size, 0, Math.PI * 2)
+          ctx.fillStyle = particleColor.replace(")", `, ${alpha})`)
+          ctx.shadowBlur = 10 * scale
+          ctx.shadowColor = particleColor
+          ctx.fill()
+          ctx.shadowBlur = 0
+        }
 
         // Connect nearby particles (simplified for performance)
         if (Math.random() > 0.99) {
@@ -171,10 +213,14 @@ function NebulaImmersionContent() {
 
     // Glitch effect timer
     const glitchTimer = setInterval(() => {
+      console.log("Activating glitch effect") // Debug
       setGlitchActive(true)
-      const timeout = setTimeout(() => setGlitchActive(false), 150) // Durata glitch 150ms
+      const timeout = setTimeout(() => {
+        console.log("Deactivating glitch effect") // Debug
+        setGlitchActive(false)
+      }, 600) // Durata glitch 600ms
       return () => clearTimeout(timeout)
-    }, 3000) // Ogni 3 secondi
+    }, 4000) // Ogni 4 secondi
 
     return () => {
       cancelAnimationFrame(animationId)
@@ -204,9 +250,16 @@ function NebulaImmersionContent() {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden bg-[#000011] p-4 sm:p-8 md:p-12 lg:p-20"
+              className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden p-4 sm:p-8 md:p-12 lg:p-20 transition-all duration-150 bg-[#000011]"
+        style={{
+          backgroundColor: glitchActive ? "#000000" : "#000011",
+          backgroundImage: glitchActive ? "url('/glitchbg.png')" : "none",
+          backgroundSize: glitchActive ? "cover" : "auto",
+          backgroundPosition: glitchActive ? "center" : "auto",
+          backgroundRepeat: glitchActive ? "no-repeat" : "repeat"
+        }}
     >
-            <canvas ref={canvasRef} className="absolute inset-0 w-full h-full z-0" />
+            <canvas ref={canvasRef} className="absolute inset-0 w-full h-full z-0" style={{ zIndex: 0 }} />
 
       {/* Nebula Overlay Gradients (Parallax Layers) */}
       <div
@@ -260,7 +313,7 @@ function NebulaImmersionContent() {
                   alt="ZODIA Image" 
                   className="max-w-[300px] md:max-w-[400px] lg:max-w-[500px] animate-pulsate relative"
                   style={{
-                    filter: "drop-shadow(0 0 8px #0202A5) drop-shadow(0 0 16px #0202A5) drop-shadow(0 0 24px #0202A5) drop-shadow(0 0 32px #0202A5) drop-shadow(0 0 40px #0202A5)",
+                    filter: glitchActive ? "none" : "drop-shadow(0 0 8px #0202A5) drop-shadow(0 0 16px #0202A5) drop-shadow(0 0 24px #0202A5) drop-shadow(0 0 32px #0202A5) drop-shadow(0 0 40px #0202A5)",
                     zIndex: 50,
                     position: "relative",
                   }}
@@ -275,7 +328,7 @@ function NebulaImmersionContent() {
                     alt="ZODIA Image Glitch Red" 
                     className="absolute max-w-[300px] md:max-w-[400px] lg:max-w-[500px] animate-glitch-red"
                     style={{
-                      filter: "drop-shadow(0 0 15px #FF0066) drop-shadow(0 0 30px #FF0066)",
+                      filter: "none",
                       transform: "translateX(-2px)",
                       opacity: 0.7,
                       mixBlendMode: "screen",
@@ -288,7 +341,7 @@ function NebulaImmersionContent() {
                     alt="ZODIA Image Glitch Cyan" 
                     className="absolute max-w-[300px] md:max-w-[400px] lg:max-w-[500px] animate-glitch-cyan"
                     style={{
-                      filter: "drop-shadow(0 0 15px #00FFFF) drop-shadow(0 0 30px #00FFFF)",
+                      filter: "none",
                       transform: "translateX(2px)",
                       opacity: 0.7,
                       mixBlendMode: "screen",
