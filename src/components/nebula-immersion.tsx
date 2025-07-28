@@ -293,6 +293,26 @@ function NebulaImmersionContent() {
         />
       ))}
 
+      {/* Docs Button - Top Right Corner */}
+      <a
+        href="https://docs.zodia.world"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed top-6 right-6 z-50 opacity-30 hover:opacity-100 transition-opacity duration-300 group"
+      >
+        <div className="flex items-center gap-2 px-3 py-2 bg-black/20 backdrop-blur-sm border border-[#00CCFF]/20 rounded-lg hover:bg-black/40 hover:border-[#00CCFF]/40 transition-all duration-300">
+          <svg 
+            className="w-4 h-4 text-[#00CCFF] group-hover:text-[#00CCFF]" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <span className="text-[#00CCFF] text-sm font-medium">Docs</span>
+        </div>
+      </a>
+
       {/* Main Content */}
               <div className="text-center z-20 max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12 lg:px-20">
 
@@ -403,11 +423,14 @@ function NebulaImmersionContent() {
           <Button
             size="lg"
             className={`bg-gradient-to-r from-[#0066FF] to-[#00CCFF] text-white font-semibold px-16 py-6 text-xl rounded-none hover:scale-105 hover:from-[#0055CC] hover:to-[#0099CC] transition-all duration-500 ${
-              glitchActive ? "animate-glitch-button font-mono" : "font-trajan"
+              glitchActive ? "animate-glitch-button font-mono" : "font-audiowide"
             }`}
             style={{ 
-              fontWeight: "600",
-              fontFamily: glitchActive ? "'Courier New', monospace" : "var(--font-trajan)"
+              fontWeight: "400",
+              fontFamily: glitchActive ? "'Courier New', monospace" : "var(--font-audiowide)",
+              letterSpacing: "0.2em",
+              textTransform: "uppercase",
+              textShadow: "0 0 15px rgba(0, 204, 255, 0.7)"
             }}
           >
             Immerse in Nebula
@@ -416,11 +439,14 @@ function NebulaImmersionContent() {
             size="lg"
             variant="outline"
             className={`border-2 border-[#00CCFF] text-[#00CCFF] font-semibold px-16 py-6 text-xl rounded-none hover:bg-[#00CCFF]/10 transition-all duration-500 backdrop-blur-sm bg-transparent ${
-              glitchActive ? "animate-glitch-button font-mono" : "font-trajan"
+              glitchActive ? "animate-glitch-button font-mono" : "font-audiowide"
             }`}
             style={{ 
-              fontWeight: "600",
-              fontFamily: glitchActive ? "'Courier New', monospace" : "var(--font-trajan)"
+              fontWeight: "400",
+              fontFamily: glitchActive ? "'Courier New', monospace" : "var(--font-audiowide)",
+              letterSpacing: "0.2em",
+              textTransform: "uppercase",
+              textShadow: "0 0 15px rgba(0, 204, 255, 0.7)"
             }}
           >
             Buy on Uniswap
