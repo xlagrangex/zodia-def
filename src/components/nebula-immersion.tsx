@@ -302,27 +302,6 @@ function NebulaImmersionContent() {
                 animation: "glitch-flicker 0.3s infinite alternate",
               }}
             />
-            {/* Glitch duplicate layers */}
-            <img 
-              src="/ZODIA-BODY.png" 
-              alt="ZODIA BODY Glitch Red" 
-              className="absolute w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px] xl:w-[400px] animate-glitch-red opacity-30"
-              style={{
-                mixBlendMode: "screen",
-                filter: "brightness(1.5) hue-rotate(180deg)",
-                transform: "skew(-2deg, 1deg) translateX(-3px)",
-              }}
-            />
-            <img 
-              src="/ZODIA-BODY.png" 
-              alt="ZODIA BODY Glitch Cyan" 
-              className="absolute w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px] xl:w-[400px] animate-glitch-cyan opacity-30"
-              style={{
-                mixBlendMode: "screen",
-                filter: "brightness(1.5) hue-rotate(90deg)",
-                transform: "skew(-2deg, 1deg) translateX(3px)",
-              }}
-            />
           </div>
         </>
       )}
