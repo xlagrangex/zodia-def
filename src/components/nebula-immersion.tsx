@@ -324,7 +324,7 @@ function NebulaImmersionContent() {
                 <img 
                   src="/zodiap.png" 
                   alt="ZODIA Image" 
-                  className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[400px] xl:w-[500px] animate-pulsate relative"
+                  className="w-[280px] sm:w-[350px] md:w-[450px] lg:w-[550px] xl:w-[650px] animate-pulsate relative"
                   style={{
                     filter: glitchActive ? "none" : "drop-shadow(0 0 4px #0202A5) drop-shadow(0 0 8px #0202A5) drop-shadow(0 0 12px #0202A5)",
                     zIndex: 50,
@@ -340,7 +340,7 @@ function NebulaImmersionContent() {
                   <img 
                     src="/zodiap.png" 
                     alt="ZODIA Image Glitch Red" 
-                    className="absolute w-[200px] sm:w-[250px] md:w-[300px] lg:w-[400px] xl:w-[500px] animate-glitch-red"
+                    className="absolute w-[280px] sm:w-[350px] md:w-[450px] lg:w-[550px] xl:w-[650px] animate-glitch-red"
                     style={{
                       filter: "none",
                       transform: "translateX(-2px) skew(30deg, 0deg)",
@@ -353,7 +353,7 @@ function NebulaImmersionContent() {
                   <img 
                     src="/zodiap.png" 
                     alt="ZODIA Image Glitch Cyan" 
-                    className="absolute w-[200px] sm:w-[250px] md:w-[300px] lg:w-[400px] xl:w-[500px] animate-glitch-cyan"
+                    className="absolute w-[280px] sm:w-[350px] md:w-[450px] lg:w-[550px] xl:w-[650px] animate-glitch-cyan"
                     style={{
                       filter: "none",
                       transform: "translateX(2px) skew(30deg, 0deg)",
@@ -372,7 +372,7 @@ function NebulaImmersionContent() {
               glitchActive ? "font-mono" : "font-trajan"
             }`}
             style={{ 
-              fontSize: "clamp(1rem, 2.5vw, 2rem)", 
+              fontSize: "clamp(1.5rem, 3.5vw, 2.5rem)", 
               animationDelay: "0.2s", 
               fontWeight: "500",
               zIndex: 100,
