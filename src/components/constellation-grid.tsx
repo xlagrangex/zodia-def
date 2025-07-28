@@ -85,7 +85,7 @@ export default function ConstellationGrid() {
       })
 
       // Draw stars
-      stars.forEach((star, index) => {
+      stars.forEach((star) => {
         const pulseIntensity = 0.5 + 0.5 * Math.sin(time + star.pulse)
 
         ctx.beginPath()

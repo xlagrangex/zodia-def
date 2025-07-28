@@ -90,7 +90,7 @@ function NebulaImmersionContent() {
         ctx.fillRect(0, 0, canvas.width, canvas.height)
       }
 
-      particles.forEach((particle, index) => {
+      particles.forEach((particle) => {
         // 3D movement
         particle.z -= particle.speed * 2
         particle.x += Math.sin(particle.angle + time) * 0.5
