@@ -243,7 +243,7 @@ function NebulaImmersionContent() {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden p-4 sm:p-8 md:p-12 lg:p-20 pb-20 transition-all duration-150"
+      className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden p-4 sm:p-6 md:p-8 lg:p-12 xl:p-20 pb-20 transition-all duration-150"
               style={{
           backgroundColor: glitchActive ? "#211440" : backgroundColor,
           backgroundImage: glitchActive ? "url('/glitchbg.png')" : "none",
@@ -298,33 +298,33 @@ function NebulaImmersionContent() {
         href="https://docs.zodia.world"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed top-6 right-6 z-50 opacity-30 hover:opacity-100 transition-opacity duration-300 group"
+        className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50 opacity-30 hover:opacity-100 transition-opacity duration-300 group"
       >
-        <div className="flex items-center gap-2 px-3 py-2 bg-black/20 backdrop-blur-sm border border-[#00CCFF]/20 rounded-lg hover:bg-black/40 hover:border-[#00CCFF]/40 transition-all duration-300">
+        <div className="flex items-center gap-2 px-2 py-1 sm:px-3 sm:py-2 bg-black/20 backdrop-blur-sm border border-[#00CCFF]/20 rounded-lg hover:bg-black/40 hover:border-[#00CCFF]/40 transition-all duration-300">
           <svg 
-            className="w-4 h-4 text-[#00CCFF] group-hover:text-[#00CCFF]" 
+            className="w-3 h-3 sm:w-4 sm:h-4 text-[#00CCFF] group-hover:text-[#00CCFF]" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
           </svg>
-          <span className="text-[#00CCFF] text-sm font-medium">Docs</span>
+          <span className="text-[#00CCFF] text-xs sm:text-sm font-medium">Docs</span>
         </div>
       </a>
 
       {/* Main Content */}
-              <div className="text-center z-20 max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12 lg:px-20">
+              <div className="text-center z-20 w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
 
-              <div className="mb-12 relative">
+              <div className="mb-8 sm:mb-12 relative">
             
             {/* Immagine ZODIA */}
-            <div className="flex justify-center mt-8 relative" style={{ zIndex: 50, position: "relative" }}>
+            <div className="flex justify-center mt-4 sm:mt-8 relative" style={{ zIndex: 50, position: "relative" }}>
               <div className="oblique-glow" style={{ zIndex: 50 }}>
                 <img 
                   src="/zodiap.png" 
                   alt="ZODIA Image" 
-                  className="max-w-[300px] md:max-w-[400px] lg:max-w-[500px] animate-pulsate relative"
+                  className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[400px] xl:w-[500px] animate-pulsate relative"
                   style={{
                     filter: glitchActive ? "none" : "drop-shadow(0 0 4px #0202A5) drop-shadow(0 0 8px #0202A5) drop-shadow(0 0 12px #0202A5)",
                     zIndex: 50,
@@ -340,7 +340,7 @@ function NebulaImmersionContent() {
                   <img 
                     src="/zodiap.png" 
                     alt="ZODIA Image Glitch Red" 
-                    className="absolute max-w-[300px] md:max-w-[400px] lg:max-w-[500px] animate-glitch-red"
+                    className="absolute w-[200px] sm:w-[250px] md:w-[300px] lg:w-[400px] xl:w-[500px] animate-glitch-red"
                     style={{
                       filter: "none",
                       transform: "translateX(-2px) skew(30deg, 0deg)",
@@ -353,7 +353,7 @@ function NebulaImmersionContent() {
                   <img 
                     src="/zodiap.png" 
                     alt="ZODIA Image Glitch Cyan" 
-                    className="absolute max-w-[300px] md:max-w-[400px] lg:max-w-[500px] animate-glitch-cyan"
+                    className="absolute w-[200px] sm:w-[250px] md:w-[300px] lg:w-[400px] xl:w-[500px] animate-glitch-cyan"
                     style={{
                       filter: "none",
                       transform: "translateX(2px) skew(30deg, 0deg)",
@@ -368,11 +368,11 @@ function NebulaImmersionContent() {
             </div>
 
           <p
-            className={`font-medium text-[#E6F3FF] tracking-[0.4em] animate-fade-in-stagger mb-4 ${
+            className={`font-medium text-[#E6F3FF] tracking-[0.2em] sm:tracking-[0.4em] animate-fade-in-stagger mb-4 ${
               glitchActive ? "font-mono" : "font-trajan"
             }`}
             style={{ 
-              fontSize: "clamp(1.2rem, 3vw, 2rem)", 
+              fontSize: "clamp(1rem, 2.5vw, 2rem)", 
               animationDelay: "0.2s", 
               fontWeight: "500",
               zIndex: 100,
@@ -382,7 +382,7 @@ function NebulaImmersionContent() {
           >
             NEBULA IMMERSION
                       </p>
-            <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#00CCFF] to-transparent mx-auto animate-line-glow" />
+            <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-transparent via-[#00CCFF] to-transparent mx-auto animate-line-glow" />
 
             {/* Light Slash Effect (creating portals) */}
           {showSlash && (
@@ -404,12 +404,13 @@ function NebulaImmersionContent() {
         </div>
 
         <p
-          className={`font-medium text-[#E6F3FF] mb-16 opacity-90 max-w-3xl mx-auto leading-relaxed animate-fade-in-stagger ${
+          className={`font-medium text-[#E6F3FF] mb-8 sm:mb-16 opacity-90 max-w-2xl sm:max-w-3xl mx-auto leading-relaxed animate-fade-in-stagger px-2 sm:px-0 ${
             glitchActive ? "font-mono" : "font-trajan"
           }`}
           style={{ 
             animationDelay: "0.4s", 
             fontWeight: "500",
+            fontSize: "clamp(0.875rem, 2vw, 1.125rem)",
             fontFamily: glitchActive ? "'Courier New', monospace" : "var(--font-trajan)"
           }}
         >
@@ -417,18 +418,18 @@ function NebulaImmersionContent() {
         </p>
 
         <div
-          className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-stagger"
+          className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center animate-fade-in-stagger px-2 sm:px-0"
           style={{ animationDelay: "0.6s" }}
         >
           <Button
             size="lg"
-            className={`bg-gradient-to-r from-[#0066FF] to-[#00CCFF] text-white font-semibold px-16 py-6 text-xl rounded-none hover:scale-105 hover:from-[#0055CC] hover:to-[#0099CC] transition-all duration-500 ${
+            className={`bg-gradient-to-r from-[#0066FF] to-[#00CCFF] text-white font-semibold px-8 sm:px-12 md:px-16 py-4 sm:py-6 text-base sm:text-lg md:text-xl rounded-none hover:scale-105 hover:from-[#0055CC] hover:to-[#0099CC] transition-all duration-500 ${
               glitchActive ? "animate-glitch-button font-mono" : "font-audiowide"
             }`}
             style={{ 
               fontWeight: "400",
               fontFamily: glitchActive ? "'Courier New', monospace" : "var(--font-audiowide)",
-              letterSpacing: "0.2em",
+              letterSpacing: "0.1em",
               textTransform: "uppercase",
               textShadow: "0 0 15px rgba(0, 204, 255, 0.7)"
             }}
@@ -438,13 +439,13 @@ function NebulaImmersionContent() {
           <Button
             size="lg"
             variant="outline"
-            className={`border-2 border-[#00CCFF] text-[#00CCFF] font-semibold px-16 py-6 text-xl rounded-none hover:bg-[#00CCFF]/10 transition-all duration-500 backdrop-blur-sm bg-transparent ${
+            className={`border-2 border-[#00CCFF] text-[#00CCFF] font-semibold px-8 sm:px-12 md:px-16 py-4 sm:py-6 text-base sm:text-lg md:text-xl rounded-none hover:bg-[#00CCFF]/10 transition-all duration-500 backdrop-blur-sm bg-transparent ${
               glitchActive ? "animate-glitch-button font-mono" : "font-audiowide"
             }`}
             style={{ 
               fontWeight: "400",
               fontFamily: glitchActive ? "'Courier New', monospace" : "var(--font-audiowide)",
-              letterSpacing: "0.2em",
+              letterSpacing: "0.1em",
               textTransform: "uppercase",
               textShadow: "0 0 15px rgba(0, 204, 255, 0.7)"
             }}
@@ -454,11 +455,11 @@ function NebulaImmersionContent() {
         </div>
 
         {/* Depth Indicators */}
-        <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 flex gap-4 z-20">
+        <div className="absolute -bottom-16 sm:-bottom-20 left-1/2 transform -translate-x-1/2 flex gap-2 sm:gap-4 z-20">
           {[...Array(5)].map((_, i) => (
             <div
               key={i}
-              className="w-3 h-3 rounded-full bg-[#00CCFF] animate-depth-pulse"
+              className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#00CCFF] animate-depth-pulse"
               style={{
                 animationDelay: `${i * 0.3}s`,
                 opacity: 1 - i * 0.15,

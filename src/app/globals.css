@@ -200,11 +200,38 @@
 
 @layer base {
   * {
-    @apply border-[hsl(var(--border))] outline-ring/50;
+    @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    body {
+      overflow-x: hidden;
+    }
+    
+    /* Prevent text overflow on mobile */
+    p, span, div {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+    
+    /* Ensure buttons don't overflow */
+    button {
+      white-space: normal;
+      word-wrap: break-word;
+    }
+    
+    /* Improve touch targets on mobile */
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+  
   .font-trajan {
     font-family: 'Quadrat Serial', system-ui, sans-serif;
   }
@@ -437,13 +464,4 @@
 /* Simple glow effect for ZODIA image */
 .oblique-glow {
   position: relative;
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
 }
