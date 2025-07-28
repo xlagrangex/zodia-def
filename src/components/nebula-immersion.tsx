@@ -253,14 +253,16 @@ function NebulaImmersionContent() {
               <div className="mb-12 relative">
             
             {/* Immagine ZODIA */}
-            <div className="flex justify-center mt-8 relative">
-              <div className="oblique-glow">
+            <div className="flex justify-center mt-8 relative" style={{ zIndex: 50, position: "relative" }}>
+              <div className="oblique-glow" style={{ zIndex: 50 }}>
                 <img 
                   src="/zodiap.png" 
                   alt="ZODIA Image" 
-                  className="max-w-[300px] md:max-w-[400px] lg:max-w-[500px] animate-pulsate relative z-10"
+                  className="max-w-[300px] md:max-w-[400px] lg:max-w-[500px] animate-pulsate relative"
                   style={{
                     filter: "drop-shadow(0 0 8px #0202A5) drop-shadow(0 0 16px #0202A5) drop-shadow(0 0 24px #0202A5) drop-shadow(0 0 32px #0202A5) drop-shadow(0 0 40px #0202A5)",
+                    zIndex: 50,
+                    position: "relative",
                   }}
                 />
               </div>
@@ -277,7 +279,8 @@ function NebulaImmersionContent() {
                       transform: "translateX(-2px)",
                       opacity: 0.7,
                       mixBlendMode: "screen",
-                      zIndex: 9,
+                      zIndex: 51,
+                      position: "absolute",
                     }}
                   />
                   <img 
@@ -289,7 +292,8 @@ function NebulaImmersionContent() {
                       transform: "translateX(2px)",
                       opacity: 0.7,
                       mixBlendMode: "screen",
-                      zIndex: 8,
+                      zIndex: 50,
+                      position: "absolute",
                     }}
                   />
                 </>
@@ -298,7 +302,13 @@ function NebulaImmersionContent() {
 
           <p
             className="font-trajan font-medium text-[#E6F3FF] tracking-[0.4em] animate-fade-in-stagger mb-4"
-            style={{ fontSize: "clamp(1.2rem, 3vw, 2rem)", animationDelay: "0.2s", fontWeight: "500" }}
+            style={{ 
+              fontSize: "clamp(1.2rem, 3vw, 2rem)", 
+              animationDelay: "0.2s", 
+              fontWeight: "500",
+              zIndex: 100,
+              position: "relative"
+            }}
           >
             NEBULA IMMERSION
                       </p>
