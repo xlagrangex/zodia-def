@@ -324,7 +324,7 @@ function NebulaImmersionContent() {
                 <img 
                   src="/zodiap.png" 
                   alt="ZODIA Image" 
-                  className="w-[280px] sm:w-[200px] md:w-[150px] lg:w-[120px] xl:w-[100px] animate-pulsate relative"
+                  className="w-[280px] sm:w-[300px] md:w-[350px] lg:w-[400px] xl:w-[500px] animate-pulsate relative"
                   style={{
                     filter: glitchActive ? "none" : "drop-shadow(0 0 4px #0202A5) drop-shadow(0 0 8px #0202A5) drop-shadow(0 0 12px #0202A5)",
                     zIndex: 50,
@@ -340,7 +340,7 @@ function NebulaImmersionContent() {
                   <img 
                     src="/zodiap.png" 
                     alt="ZODIA Image Glitch Red" 
-                    className="absolute w-[280px] sm:w-[200px] md:w-[150px] lg:w-[120px] xl:w-[100px] animate-glitch-red"
+                    className="absolute w-[280px] sm:w-[300px] md:w-[350px] lg:w-[400px] xl:w-[500px] animate-glitch-red"
                     style={{
                       filter: "none",
                       transform: "translateX(-2px) skew(5deg, 0deg)",
@@ -353,7 +353,7 @@ function NebulaImmersionContent() {
                   <img 
                     src="/zodiap.png" 
                     alt="ZODIA Image Glitch Cyan" 
-                    className="absolute w-[280px] sm:w-[200px] md:w-[150px] lg:w-[120px] xl:w-[100px] animate-glitch-cyan"
+                    className="absolute w-[280px] sm:w-[300px] md:w-[350px] lg:w-[400px] xl:w-[500px] animate-glitch-cyan"
                     style={{
                       filter: "none",
                       transform: "translateX(2px) skew(5deg, 0deg)",
@@ -370,7 +370,7 @@ function NebulaImmersionContent() {
           <p
             className={`font-medium text-[#E6F3FF] tracking-[0.2em] sm:tracking-[0.4em] animate-fade-in-stagger mb-4 font-trajan`}
             style={{ 
-              fontSize: "clamp(1.5rem, 2vw, 1rem)", 
+              fontSize: "clamp(1.5rem, 3vw, 2.2rem)", 
               animationDelay: "0.2s", 
               fontWeight: "500",
               zIndex: 100,
@@ -415,28 +415,32 @@ function NebulaImmersionContent() {
 
         <div
           className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center animate-fade-in-stagger px-2 sm:px-0"
-          style={{ animationDelay: "0.6s" }}
-        >
-          <Button
-            size="lg"
-            className={`bg-gradient-to-r from-[#0066FF] to-[#00CCFF] text-white font-semibold px-8 sm:px-12 md:px-16 py-4 sm:py-6 text-base sm:text-lg md:text-xl rounded-none hover:scale-105 hover:from-[#0055CC] hover:to-[#0099CC] transition-all duration-500 font-audiowide w-full sm:w-auto ${
-              glitchActive ? "animate-glitch-button" : ""
-            }`}
-            style={{ 
-              fontWeight: "400",
-              fontFamily: "var(--font-audiowide)",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              textShadow: "0 0 15px rgba(0, 204, 255, 0.7)"
-            }}
+            style={{ animationDelay: "0.6s" }}
           >
-            <div className="flex flex-col items-center">
-              <span>Talk to Zodia</span>
-              <span className="text-xs sm:text-sm opacity-80 tracking-wider mt-1">
-                COMING SOON
-              </span>
-            </div>
-          </Button>
+            <Button 
+              size="lg"
+              className={`bg-gradient-to-r from-[#0066FF] to-[#00CCFF] text-white font-semibold px-8 sm:px-12 md:px-16 py-4 sm:py-6 text-base sm:text-lg md:text-xl rounded-none hover:scale-105 hover:from-[#0055CC] hover:to-[#0099CC] transition-all duration-500 font-audiowide w-full sm:w-auto ${
+                glitchActive ? "animate-glitch-button" : ""
+              }`}
+              style={{ 
+                fontWeight: "400",
+                fontFamily: "var(--font-audiowide)",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                textShadow: "0 0 15px rgba(0, 204, 255, 0.7)"
+              }}
+              onClick={() => {
+                console.log("Talk to Zodia clicked");
+                // TODO: Implement Zodia chat functionality
+              }}
+            >
+              <div className="flex flex-col items-center">
+                <span>Enter Zodia</span>
+                <span className="text-xs sm:text-sm opacity-80 tracking-wider -mt-1">
+                  COMING SOON
+                </span>
+              </div>
+            </Button>
           <Button
             size="lg"
             variant="outline"
