@@ -298,18 +298,29 @@ function NebulaImmersionContent() {
         href="https://docs.zodia.world"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50 opacity-30 hover:opacity-100 transition-opacity duration-300 group"
+        className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50 opacity-100 hover:opacity-100 transition-opacity duration-300 group"
       >
-        <div className="flex items-center gap-2 px-2 py-1 sm:px-3 sm:py-2 bg-black/20 backdrop-blur-sm border border-[#00CCFF]/20 rounded-lg hover:bg-black/40 hover:border-[#00CCFF]/40 transition-all duration-300">
+        <div className="flex items-center gap-2 px-2 py-1 sm:px-3 sm:py-2 bg-black/60 backdrop-blur-sm border border-[#00CCFF]/40 rounded-lg hover:bg-black/80 hover:border-[#00CCFF]/60 transition-all duration-300">
           <svg 
-            className="w-3 h-3 sm:w-4 sm:h-4 text-[#00CCFF] group-hover:text-[#00CCFF]" 
+            className="w-3 h-3 sm:w-4 sm:h-4 text-[#00CCFF] group-hover:text-white" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
           </svg>
-          <span className="text-[#00CCFF] text-xs sm:text-sm font-medium">Docs</span>
+          <span 
+            className="text-[#00CCFF] text-xs sm:text-sm font-audiowide group-hover:text-white"
+            style={{
+              fontWeight: "400",
+              fontFamily: "var(--font-audiowide)",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              textShadow: "0 0 15px rgba(0, 204, 255, 0.7)"
+            }}
+          >
+            Docs
+          </span>
         </div>
       </a>
 
@@ -444,7 +455,7 @@ function NebulaImmersionContent() {
           <Button
             size="lg"
             variant="outline"
-            className={`border-2 border-[#00CCFF] text-[#00CCFF] font-semibold px-8 sm:px-12 md:px-16 py-4 sm:py-6 text-sm sm:text-base md:text-lg rounded-none hover:bg-[#00CCFF]/10 transition-all duration-500 backdrop-blur-sm bg-transparent font-audiowide w-full sm:w-auto ${
+            className={`border-2 border-[#00CCFF] text-[#00CCFF] font-semibold px-8 sm:px-12 md:px-16 py-4 sm:py-6 text-sm sm:text-base md:text-lg rounded-none hover:bg-[#00CCFF]/10 hover:text-white transition-all duration-500 backdrop-blur-sm bg-transparent font-audiowide w-full sm:w-auto ${
               glitchActive ? "animate-glitch-button" : ""
             }`}
             style={{ 
