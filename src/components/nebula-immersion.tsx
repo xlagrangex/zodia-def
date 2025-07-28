@@ -306,7 +306,7 @@ function NebulaImmersionContent() {
                   alt="ZODIA Image" 
                   className="max-w-[300px] md:max-w-[400px] lg:max-w-[500px] animate-pulsate relative"
                   style={{
-                    filter: glitchActive ? "none" : "drop-shadow(0 0 8px #0202A5) drop-shadow(0 0 16px #0202A5) drop-shadow(0 0 24px #0202A5) drop-shadow(0 0 32px #0202A5) drop-shadow(0 0 40px #0202A5)",
+                    filter: glitchActive ? "none" : "drop-shadow(0 0 4px #0202A5) drop-shadow(0 0 8px #0202A5) drop-shadow(0 0 12px #0202A5)",
                     zIndex: 50,
                     position: "relative",
                     transform: glitchActive ? "skew(30deg, 0deg)" : "skew(0deg, 0deg)",
@@ -402,7 +402,7 @@ function NebulaImmersionContent() {
         >
           <Button
             size="lg"
-            className={`bg-[#0066FF] text-white font-semibold px-16 py-6 text-xl rounded-full hover:scale-105 transition-all duration-500 shadow-[0_0_20px_#0066FF,0_0_40px_#00CCFF,0_0_60px_#0066FF] hover:shadow-[0_0_30px_#0066FF,0_0_60px_#00CCFF,0_0_90px_#0066FF] animate-immersion-button ${
+            className={`bg-[#0066FF] text-white font-semibold px-16 py-6 text-xl rounded-full hover:scale-105 transition-all duration-500 shadow-[0_0_8px_#0066FF,0_0_16px_#00CCFF] hover:shadow-[0_0_12px_#0066FF,0_0_24px_#00CCFF] animate-immersion-button ${
               glitchActive ? "animate-glitch-button font-mono" : "font-trajan"
             }`}
             style={{ 
