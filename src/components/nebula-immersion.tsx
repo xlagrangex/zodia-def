@@ -380,7 +380,7 @@ function NebulaImmersionContent() {
           >
             NEBULA IMMERSION
                       </p>
-            <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-transparent via-[#00CCFF] to-transparent mx-auto animate-line-glow" />
+            <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-[#010285] via-[#00CCFF] to-[#010285] mx-auto animate-line-glow" />
 
             {/* Light Slash Effect (creating portals) */}
           {showSlash && (
