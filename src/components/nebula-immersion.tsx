@@ -417,21 +417,26 @@ function NebulaImmersionContent() {
           className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center animate-fade-in-stagger px-2 sm:px-0"
           style={{ animationDelay: "0.6s" }}
         >
-          <Button
-            size="lg"
-            className={`bg-gradient-to-r from-[#0066FF] to-[#00CCFF] text-white font-semibold px-8 sm:px-12 md:px-16 py-4 sm:py-6 text-base sm:text-lg md:text-xl rounded-none hover:scale-105 hover:from-[#0055CC] hover:to-[#0099CC] transition-all duration-500 font-audiowide ${
-              glitchActive ? "animate-glitch-button" : ""
-            }`}
-            style={{ 
-              fontWeight: "400",
-              fontFamily: "var(--font-audiowide)",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              textShadow: "0 0 15px rgba(0, 204, 255, 0.7)"
-            }}
-          >
-            Immerse in Nebula
-          </Button>
+          <div className="flex flex-col items-center">
+            <Button
+              size="lg"
+              className={`bg-gradient-to-r from-[#0066FF] to-[#00CCFF] text-white font-semibold px-8 sm:px-12 md:px-16 py-4 sm:py-6 text-base sm:text-lg md:text-xl rounded-none hover:scale-105 hover:from-[#0055CC] hover:to-[#0099CC] transition-all duration-500 font-audiowide ${
+                glitchActive ? "animate-glitch-button" : ""
+              }`}
+              style={{ 
+                fontWeight: "400",
+                fontFamily: "var(--font-audiowide)",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                textShadow: "0 0 15px rgba(0, 204, 255, 0.7)"
+              }}
+            >
+              Talk to Zodia
+            </Button>
+            <span className="text-[#00CCFF] text-xs sm:text-sm font-trajan mt-2 opacity-80 tracking-wider">
+              COMING SOON
+            </span>
+          </div>
           <Button
             size="lg"
             variant="outline"
