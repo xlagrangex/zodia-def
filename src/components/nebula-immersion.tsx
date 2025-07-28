@@ -294,7 +294,7 @@ function NebulaImmersionContent() {
             <img 
               src="/ZODIA-BODY.png" 
               alt="ZODIA BODY Glitch" 
-              className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px] xl:w-[400px] animate-glitch-flicker opacity-40"
+              className="w-[400px] sm:w-[250px] md:w-[300px] lg:w-[350px] xl:w-[400px] animate-glitch-flicker opacity-40"
               style={{
                 mixBlendMode: "screen",
                 filter: "brightness(1.2) contrast(1.3) saturate(1.5)",
