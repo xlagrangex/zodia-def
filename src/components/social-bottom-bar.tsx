@@ -42,7 +42,7 @@ export default function SocialBottomBar() {
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center space-x-1 sm:space-x-3">
+          <div className="flex items-center -space-x-1 sm:space-x-3">
             {/* X/Twitter */}
             <a
               href="https://x.com/Zodia_agent"
