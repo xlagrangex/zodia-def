@@ -348,13 +348,16 @@ function NebulaImmersionContent() {
             </div>
 
           <p
-            className="font-trajan font-medium text-[#E6F3FF] tracking-[0.4em] animate-fade-in-stagger mb-4"
+            className={`font-medium text-[#E6F3FF] tracking-[0.4em] animate-fade-in-stagger mb-4 ${
+              glitchActive ? "font-mono" : "font-trajan"
+            }`}
             style={{ 
               fontSize: "clamp(1.2rem, 3vw, 2rem)", 
               animationDelay: "0.2s", 
               fontWeight: "500",
               zIndex: 100,
-              position: "relative"
+              position: "relative",
+              fontFamily: glitchActive ? "'Courier New', monospace" : "var(--font-trajan)"
             }}
           >
             NEBULA IMMERSION
@@ -381,8 +384,14 @@ function NebulaImmersionContent() {
         </div>
 
         <p
-          className="font-trajan font-medium text-[#E6F3FF] mb-16 opacity-90 max-w-3xl mx-auto leading-relaxed animate-fade-in-stagger"
-          style={{ animationDelay: "0.4s", fontWeight: "500" }}
+          className={`font-medium text-[#E6F3FF] mb-16 opacity-90 max-w-3xl mx-auto leading-relaxed animate-fade-in-stagger ${
+            glitchActive ? "font-mono" : "font-trajan"
+          }`}
+          style={{ 
+            animationDelay: "0.4s", 
+            fontWeight: "500",
+            fontFamily: glitchActive ? "'Courier New', monospace" : "var(--font-trajan)"
+          }}
         >
           Dive deep into the cosmic nebula where stellar formations birth the future of decentralized astrology.
         </p>
@@ -393,20 +402,26 @@ function NebulaImmersionContent() {
         >
           <Button
             size="lg"
-            className={`bg-[#0066FF] text-white font-trajan font-semibold px-16 py-6 text-xl rounded-full hover:scale-105 transition-all duration-500 shadow-[0_0_20px_#0066FF,0_0_40px_#00CCFF,0_0_60px_#0066FF] hover:shadow-[0_0_30px_#0066FF,0_0_60px_#00CCFF,0_0_90px_#0066FF] animate-immersion-button ${
-              glitchActive ? "animate-glitch-button" : ""
+            className={`bg-[#0066FF] text-white font-semibold px-16 py-6 text-xl rounded-full hover:scale-105 transition-all duration-500 shadow-[0_0_20px_#0066FF,0_0_40px_#00CCFF,0_0_60px_#0066FF] hover:shadow-[0_0_30px_#0066FF,0_0_60px_#00CCFF,0_0_90px_#0066FF] animate-immersion-button ${
+              glitchActive ? "animate-glitch-button font-mono" : "font-trajan"
             }`}
-            style={{ fontWeight: "600" }}
+            style={{ 
+              fontWeight: "600",
+              fontFamily: glitchActive ? "'Courier New', monospace" : "var(--font-trajan)"
+            }}
           >
             Immerse in Nebula
           </Button>
           <Button
             size="lg"
             variant="outline"
-            className={`border-2 border-[#00CCFF] text-[#00CCFF] font-trajan font-semibold px-16 py-6 text-xl rounded-full hover:bg-[#00CCFF]/10 transition-all duration-500 backdrop-blur-sm bg-transparent ${
-              glitchActive ? "animate-glitch-button" : ""
+            className={`border-2 border-[#00CCFF] text-[#00CCFF] font-semibold px-16 py-6 text-xl rounded-full hover:bg-[#00CCFF]/10 transition-all duration-500 backdrop-blur-sm bg-transparent ${
+              glitchActive ? "animate-glitch-button font-mono" : "font-trajan"
             }`}
-            style={{ fontWeight: "600" }}
+            style={{ 
+              fontWeight: "600",
+              fontFamily: glitchActive ? "'Courier New', monospace" : "var(--font-trajan)"
+            }}
           >
             Stellar Genesis
           </Button>
