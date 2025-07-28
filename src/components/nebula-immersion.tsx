@@ -324,7 +324,7 @@ function NebulaImmersionContent() {
                 <img 
                   src="/zodiap.png" 
                   alt="ZODIA Image" 
-                  className="w-[280px] sm:w-[350px] md:w-[450px] lg:w-[550px] xl:w-[650px] animate-pulsate relative"
+                  className="w-[280px] sm:w-[200px] md:w-[150px] lg:w-[120px] xl:w-[100px] animate-pulsate relative"
                   style={{
                     filter: glitchActive ? "none" : "drop-shadow(0 0 4px #0202A5) drop-shadow(0 0 8px #0202A5) drop-shadow(0 0 12px #0202A5)",
                     zIndex: 50,
@@ -340,7 +340,7 @@ function NebulaImmersionContent() {
                   <img 
                     src="/zodiap.png" 
                     alt="ZODIA Image Glitch Red" 
-                    className="absolute w-[280px] sm:w-[350px] md:w-[450px] lg:w-[550px] xl:w-[650px] animate-glitch-red"
+                    className="absolute w-[280px] sm:w-[200px] md:w-[150px] lg:w-[120px] xl:w-[100px] animate-glitch-red"
                     style={{
                       filter: "none",
                       transform: "translateX(-2px) skew(5deg, 0deg)",
@@ -353,7 +353,7 @@ function NebulaImmersionContent() {
                   <img 
                     src="/zodiap.png" 
                     alt="ZODIA Image Glitch Cyan" 
-                    className="absolute w-[280px] sm:w-[350px] md:w-[450px] lg:w-[550px] xl:w-[650px] animate-glitch-cyan"
+                    className="absolute w-[280px] sm:w-[200px] md:w-[150px] lg:w-[120px] xl:w-[100px] animate-glitch-cyan"
                     style={{
                       filter: "none",
                       transform: "translateX(2px) skew(5deg, 0deg)",
@@ -370,7 +370,7 @@ function NebulaImmersionContent() {
           <p
             className={`font-medium text-[#E6F3FF] tracking-[0.2em] sm:tracking-[0.4em] animate-fade-in-stagger mb-4 font-trajan`}
             style={{ 
-              fontSize: "clamp(1.5rem, 3.5vw, 2.5rem)", 
+              fontSize: "clamp(1.5rem, 2vw, 1rem)", 
               animationDelay: "0.2s", 
               fontWeight: "500",
               zIndex: 100,
