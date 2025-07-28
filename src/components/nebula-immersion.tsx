@@ -419,7 +419,7 @@ function NebulaImmersionContent() {
           >
             <Button 
               size="lg"
-              className={`bg-gradient-to-r from-[#0066FF] to-[#00CCFF] text-white font-semibold px-8 sm:px-12 md:px-16 py-4 sm:py-6 text-base sm:text-lg md:text-xl rounded-none hover:scale-105 hover:from-[#0055CC] hover:to-[#0099CC] transition-all duration-500 font-audiowide w-full sm:w-auto ${
+              className={`bg-gradient-to-r from-[#0066FF] to-[#00CCFF] text-white font-semibold px-8 sm:px-12 md:px-16 py-4 sm:py-6 text-sm sm:text-base md:text-lg rounded-none hover:scale-105 hover:from-[#0055CC] hover:to-[#0099CC] transition-all duration-500 font-audiowide w-full sm:w-auto ${
                 glitchActive ? "animate-glitch-button" : ""
               }`}
               style={{ 
@@ -444,7 +444,7 @@ function NebulaImmersionContent() {
           <Button
             size="lg"
             variant="outline"
-            className={`border-2 border-[#00CCFF] text-[#00CCFF] font-semibold px-8 sm:px-12 md:px-16 py-4 sm:py-6 text-base sm:text-lg md:text-xl rounded-none hover:bg-[#00CCFF]/10 transition-all duration-500 backdrop-blur-sm bg-transparent font-audiowide w-full sm:w-auto ${
+            className={`border-2 border-[#00CCFF] text-[#00CCFF] font-semibold px-8 sm:px-12 md:px-16 py-4 sm:py-6 text-sm sm:text-base md:text-lg rounded-none hover:bg-[#00CCFF]/10 transition-all duration-500 backdrop-blur-sm bg-transparent font-audiowide w-full sm:w-auto ${
               glitchActive ? "animate-glitch-button" : ""
             }`}
             style={{ 
