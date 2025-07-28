@@ -329,7 +329,7 @@ function NebulaImmersionContent() {
                     filter: glitchActive ? "none" : "drop-shadow(0 0 4px #0202A5) drop-shadow(0 0 8px #0202A5) drop-shadow(0 0 12px #0202A5)",
                     zIndex: 50,
                     position: "relative",
-                    transform: glitchActive ? "skew(30deg, 0deg)" : "skew(0deg, 0deg)",
+                    transform: glitchActive ? "skew(5deg, 0deg)" : "skew(0deg, 0deg)",
                   }}
                 />
               </div>
@@ -343,7 +343,7 @@ function NebulaImmersionContent() {
                     className="absolute w-[280px] sm:w-[350px] md:w-[450px] lg:w-[550px] xl:w-[650px] animate-glitch-red"
                     style={{
                       filter: "none",
-                      transform: "translateX(-2px) skew(30deg, 0deg)",
+                      transform: "translateX(-2px) skew(5deg, 0deg)",
                       opacity: 0.7,
                       mixBlendMode: "screen",
                       zIndex: 51,
@@ -356,7 +356,7 @@ function NebulaImmersionContent() {
                     className="absolute w-[280px] sm:w-[350px] md:w-[450px] lg:w-[550px] xl:w-[650px] animate-glitch-cyan"
                     style={{
                       filter: "none",
-                      transform: "translateX(2px) skew(30deg, 0deg)",
+                      transform: "translateX(2px) skew(5deg, 0deg)",
                       opacity: 0.7,
                       mixBlendMode: "screen",
                       zIndex: 50,
@@ -368,16 +368,14 @@ function NebulaImmersionContent() {
             </div>
 
           <p
-            className={`font-medium text-[#E6F3FF] tracking-[0.2em] sm:tracking-[0.4em] animate-fade-in-stagger mb-4 ${
-              glitchActive ? "font-mono" : "font-trajan"
-            }`}
+            className={`font-medium text-[#E6F3FF] tracking-[0.2em] sm:tracking-[0.4em] animate-fade-in-stagger mb-4 font-trajan`}
             style={{ 
               fontSize: "clamp(1.5rem, 3.5vw, 2.5rem)", 
               animationDelay: "0.2s", 
               fontWeight: "500",
               zIndex: 100,
               position: "relative",
-              fontFamily: glitchActive ? "'Courier New', monospace" : "var(--font-trajan)"
+              fontFamily: "var(--font-trajan)"
             }}
           >
             NEBULA IMMERSION
@@ -404,14 +402,12 @@ function NebulaImmersionContent() {
         </div>
 
         <p
-          className={`font-medium text-[#E6F3FF] mb-8 sm:mb-16 opacity-90 max-w-2xl sm:max-w-3xl mx-auto leading-relaxed animate-fade-in-stagger px-2 sm:px-0 ${
-            glitchActive ? "font-mono" : "font-trajan"
-          }`}
+          className={`font-medium text-[#E6F3FF] mb-8 sm:mb-16 opacity-90 max-w-2xl sm:max-w-3xl mx-auto leading-relaxed animate-fade-in-stagger px-2 sm:px-0 font-trajan`}
           style={{ 
             animationDelay: "0.4s", 
             fontWeight: "500",
             fontSize: "clamp(0.875rem, 2vw, 1.125rem)",
-            fontFamily: glitchActive ? "'Courier New', monospace" : "var(--font-trajan)"
+            fontFamily: "var(--font-trajan)"
           }}
         >
           Dive deep into the cosmic nebula where stellar formations birth the future of decentralized astrology.
@@ -423,12 +419,12 @@ function NebulaImmersionContent() {
         >
           <Button
             size="lg"
-            className={`bg-gradient-to-r from-[#0066FF] to-[#00CCFF] text-white font-semibold px-8 sm:px-12 md:px-16 py-4 sm:py-6 text-base sm:text-lg md:text-xl rounded-none hover:scale-105 hover:from-[#0055CC] hover:to-[#0099CC] transition-all duration-500 ${
-              glitchActive ? "animate-glitch-button font-mono" : "font-audiowide"
+            className={`bg-gradient-to-r from-[#0066FF] to-[#00CCFF] text-white font-semibold px-8 sm:px-12 md:px-16 py-4 sm:py-6 text-base sm:text-lg md:text-xl rounded-none hover:scale-105 hover:from-[#0055CC] hover:to-[#0099CC] transition-all duration-500 font-audiowide ${
+              glitchActive ? "animate-glitch-button" : ""
             }`}
             style={{ 
               fontWeight: "400",
-              fontFamily: glitchActive ? "'Courier New', monospace" : "var(--font-audiowide)",
+              fontFamily: "var(--font-audiowide)",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               textShadow: "0 0 15px rgba(0, 204, 255, 0.7)"
@@ -439,12 +435,12 @@ function NebulaImmersionContent() {
           <Button
             size="lg"
             variant="outline"
-            className={`border-2 border-[#00CCFF] text-[#00CCFF] font-semibold px-8 sm:px-12 md:px-16 py-4 sm:py-6 text-base sm:text-lg md:text-xl rounded-none hover:bg-[#00CCFF]/10 transition-all duration-500 backdrop-blur-sm bg-transparent ${
-              glitchActive ? "animate-glitch-button font-mono" : "font-audiowide"
+            className={`border-2 border-[#00CCFF] text-[#00CCFF] font-semibold px-8 sm:px-12 md:px-16 py-4 sm:py-6 text-base sm:text-lg md:text-xl rounded-none hover:bg-[#00CCFF]/10 transition-all duration-500 backdrop-blur-sm bg-transparent font-audiowide ${
+              glitchActive ? "animate-glitch-button" : ""
             }`}
             style={{ 
               fontWeight: "400",
-              fontFamily: glitchActive ? "'Courier New', monospace" : "var(--font-audiowide)",
+              fontFamily: "var(--font-audiowide)",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               textShadow: "0 0 15px rgba(0, 204, 255, 0.7)"
