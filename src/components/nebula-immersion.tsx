@@ -154,6 +154,22 @@ function NebulaImmersionContent() {
             ctx.fillText(randomChar, rainX, rainY)
           }
           ctx.shadowBlur = 0
+          
+          // Draw ZODIA-BODY image during glitch at same z-level as matrix rain
+          if (Math.random() > 0.95) { // Rare appearance
+            const img = new Image()
+            img.src = "/ZODIA-BODY.png"
+            if (img.complete) {
+              const imgWidth = 100 * scale
+              const imgHeight = (img.height / img.width) * imgWidth
+              const imgX = x2d - imgWidth / 2
+              const imgY = y2d - imgHeight / 2
+              
+              ctx.globalAlpha = alpha * 0.3 // Very transparent
+              ctx.drawImage(img, imgX, imgY, imgWidth, imgHeight)
+              ctx.globalAlpha = 1
+            }
+          }
         } else {
           // Normal particle drawing - instant transition
           ctx.beginPath()
@@ -272,8 +288,44 @@ function NebulaImmersionContent() {
           <div className="absolute top-20 left-10 w-16 h-24 bg-gradient-to-b from-[#00FF00] via-[#00CCFF] to-[#FF0066] opacity-80 animate-glitch-flicker z-10" />
           <div className="absolute bottom-32 right-16 w-12 h-32 bg-gradient-to-t from-[#FFFF00] via-[#FF6600] to-[#FF0066] opacity-70 animate-glitch-flicker z-10" />
           <div className="absolute top-1/3 right-20 w-8 h-16 bg-gradient-to-b from-[#00CCFF] to-[#0066FF] opacity-60 animate-glitch-flicker z-10" />
+          
+          {/* ZODIA-BODY glitch overlay */}
+          <div className="absolute inset-0 flex items-center justify-center z-10">
+            <img 
+              src="/ZODIA-BODY.png" 
+              alt="ZODIA BODY Glitch" 
+              className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px] xl:w-[400px] animate-glitch-flicker opacity-40"
+              style={{
+                mixBlendMode: "screen",
+                filter: "brightness(1.2) contrast(1.3) saturate(1.5)",
+                transform: "skew(-2deg, 1deg) scale(1.05)",
+                animation: "glitch-flicker 0.3s infinite alternate",
+              }}
+            />
+            {/* Glitch duplicate layers */}
+            <img 
+              src="/ZODIA-BODY.png" 
+              alt="ZODIA BODY Glitch Red" 
+              className="absolute w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px] xl:w-[400px] animate-glitch-red opacity-30"
+              style={{
+                mixBlendMode: "screen",
+                filter: "brightness(1.5) hue-rotate(180deg)",
+                transform: "skew(-2deg, 1deg) translateX(-3px)",
+              }}
+            />
+            <img 
+              src="/ZODIA-BODY.png" 
+              alt="ZODIA BODY Glitch Cyan" 
+              className="absolute w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px] xl:w-[400px] animate-glitch-cyan opacity-30"
+              style={{
+                mixBlendMode: "screen",
+                filter: "brightness(1.5) hue-rotate(90deg)",
+                transform: "skew(-2deg, 1deg) translateX(3px)",
+              }}
+            />
+          </div>
         </>
-              )}
+      )}
 
       {/* Energy Waves */}
       {[...Array(3)].map((_, i) => (
@@ -331,6 +383,8 @@ function NebulaImmersionContent() {
             
             {/* Immagine ZODIA */}
             <div className="flex justify-center mt-4 sm:mt-8 relative" style={{ zIndex: 50, position: "relative" }}>
+
+              
               <div className="oblique-glow" style={{ zIndex: 50 }}>
                 <img 
                   src="/zodiap.png" 
@@ -378,7 +432,7 @@ function NebulaImmersionContent() {
               )}
             </div>
 
-          <p
+            <p
             className={`font-medium text-[#E6F3FF] tracking-[0.2em] sm:tracking-[0.4em] animate-fade-in-stagger mb-4 font-trajan`}
             style={{ 
               fontSize: "clamp(1.5rem, 3vw, 2.2rem)", 
