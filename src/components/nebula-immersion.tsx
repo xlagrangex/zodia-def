@@ -402,7 +402,7 @@ function NebulaImmersionContent() {
         >
           <Button
             size="lg"
-            className={`bg-[#0066FF] text-white font-semibold px-16 py-6 text-xl rounded-full hover:scale-105 transition-all duration-500 shadow-[0_0_8px_#0066FF,0_0_16px_#00CCFF] hover:shadow-[0_0_12px_#0066FF,0_0_24px_#00CCFF] animate-immersion-button ${
+            className={`bg-gradient-to-r from-[#0066FF] to-[#00CCFF] text-white font-semibold px-16 py-6 text-xl rounded-none hover:scale-105 hover:from-[#0055CC] hover:to-[#0099CC] transition-all duration-500 ${
               glitchActive ? "animate-glitch-button font-mono" : "font-trajan"
             }`}
             style={{ 
@@ -415,7 +415,7 @@ function NebulaImmersionContent() {
           <Button
             size="lg"
             variant="outline"
-            className={`border-2 border-[#00CCFF] text-[#00CCFF] font-semibold px-16 py-6 text-xl rounded-full hover:bg-[#00CCFF]/10 transition-all duration-500 backdrop-blur-sm bg-transparent ${
+            className={`border-2 border-[#00CCFF] text-[#00CCFF] font-semibold px-16 py-6 text-xl rounded-none hover:bg-[#00CCFF]/10 transition-all duration-500 backdrop-blur-sm bg-transparent ${
               glitchActive ? "animate-glitch-button font-mono" : "font-trajan"
             }`}
             style={{ 
@@ -423,7 +423,7 @@ function NebulaImmersionContent() {
               fontFamily: glitchActive ? "'Courier New', monospace" : "var(--font-trajan)"
             }}
           >
-            Stellar Genesis
+            Buy on Uniswap
           </Button>
         </div>
 

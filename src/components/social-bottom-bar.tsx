@@ -45,7 +45,7 @@ export default function SocialBottomBar() {
           <div className="flex items-center space-x-4">
             {/* X/Twitter */}
             <a
-              href="https://twitter.com/zodia_def"
+              href="https://x.com/Zodia_agent"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#E6F3FF] hover:text-[#00CCFF] transition-colors duration-300"

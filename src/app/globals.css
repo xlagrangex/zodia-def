@@ -354,6 +354,19 @@
   }
 }
 
+@keyframes holographic {
+  0%, 100% { 
+    background: linear-gradient(45deg, #0066FF, #00CCFF, #0066FF);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+  }
+  50% { 
+    background: linear-gradient(45deg, #00CCFF, #0066FF, #00CCFF);
+    background-size: 200% 200%;
+    background-position: 100% 50%;
+  }
+}
+
 /* Animation Classes */
 .animate-pulsate { animation: pulsate 2s ease-in-out infinite alternate; }
 .animate-light-slash-portal { animation: light-slash-portal 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
@@ -375,6 +388,7 @@
 .animate-aurora-streak-2 { animation: aurora-streak-2 9s ease-in-out infinite; }
 .animate-aurora-streak-3 { animation: aurora-streak-3 5s ease-in-out infinite; }
 .animate-glitch-button { animation: glitch-button 0.15s ease-in-out; }
+.animate-holographic { animation: holographic 3s ease-in-out infinite; }
 
 /* Simple glow effect for ZODIA image */
 .oblique-glow {
