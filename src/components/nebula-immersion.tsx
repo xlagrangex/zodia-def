@@ -454,7 +454,7 @@ function NebulaImmersionContent() {
             fontFamily: "var(--font-trajan)"
           }}
         >
-          Dive deep into the cosmic nebula where stellar formations birth the future of decentralized astrology.
+          Enter the realm of Zodia, where cutting-edge intelligence meets seamless financial mastery.
         </p>
 
         <div
