@@ -454,7 +454,7 @@ function NebulaImmersionContent() {
             fontFamily: "var(--font-trajan)"
           }}
         >
-          Enter the realm of Zodia, where cutting-edge intelligence meets seamless financial mastery.
+          Enter the realm of Zodia, where cutting edge intelligence meets seamless financial mastery.
         </p>
 
         <div
