@@ -42,7 +42,7 @@ export default function SocialBottomBar() {
           </div>
 
           {/* Email Section - Center */}
-          <div className="flex items-center">
+          <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
             <a
               href="mailto:hello@zodia.world"
               className="text-[#E6F3FF] hover:text-[#00CCFF] transition-colors duration-300 text-xs sm:text-sm"
