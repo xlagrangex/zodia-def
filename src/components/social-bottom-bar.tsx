@@ -45,9 +45,11 @@ export default function SocialBottomBar() {
           <div className="flex items-center">
             <a
               href="mailto:hello@zodia.world"
-              className="text-[#E6F3FF] hover:text-[#00CCFF] transition-colors duration-300 text-xs sm:text-sm font-trajan"
+              className="text-[#E6F3FF] hover:text-[#00CCFF] transition-colors duration-300 text-xs sm:text-sm"
             >
-              hello@zodia.world
+              <span className="font-trajan">hello</span>
+              <span className="font-sans">@</span>
+              <span className="font-trajan">zodia.world</span>
             </a>
           </div>
 
