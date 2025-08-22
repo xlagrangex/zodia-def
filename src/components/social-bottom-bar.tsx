@@ -43,7 +43,7 @@ export default function SocialBottomBar() {
           </div>
 
           {/* Email Section - Center */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
+          <div className="flex items-center">
             <a
               href="mailto:hello@zodia.world"
               className="text-[#E6F3FF] hover:text-[#00CCFF] transition-colors duration-300 text-sm"
@@ -94,9 +94,9 @@ export default function SocialBottomBar() {
       </div>
 
       {/* Mobile Layout */}
-      <div className="sm:hidden px-3 py-2">
+      <div className="sm:hidden px-3 py-1">
         {/* Top Row - Social Icons Centered */}
-        <div className="flex items-center justify-center space-x-6 mb-2">
+        <div className="flex items-center justify-center space-x-6 mb-1">
           {/* X/Twitter */}
           <a
             href="https://x.com/Zodia_agent"
