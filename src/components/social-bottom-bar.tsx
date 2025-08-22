@@ -96,7 +96,7 @@ export default function SocialBottomBar() {
       {/* Mobile Layout - Completamente ricreato */}
       <div className="sm:hidden">
         {/* Top Row - Social Icons Centered */}
-        <div className="flex items-center justify-center space-x-4 py-1">
+        <div className="flex items-center justify-center space-x-4 pt-1 pb-0 -mb-1">
           {/* X/Twitter */}
           <a
             href="https://x.com/Zodia_agent"
