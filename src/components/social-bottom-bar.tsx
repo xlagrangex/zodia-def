@@ -23,7 +23,7 @@ export default function SocialBottomBar() {
     <div className="fixed bottom-0 left-0 right-0 bg-black/80 backdrop-blur-md border-t border-[#00CCFF]/20 z-50">
       {/* Desktop Layout */}
       <div className="hidden sm:block max-w-7xl mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between relative">
           {/* Contract Address Section */}
           <div className="flex items-center space-x-3">
             <span className="text-[#E6F3FF] text-sm font-trajan opacity-80">
@@ -43,7 +43,7 @@ export default function SocialBottomBar() {
           </div>
 
           {/* Email Section - Center */}
-          <div className="flex items-center">
+          <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
             <a
               href="mailto:hello@zodia.world"
               className="text-[#E6F3FF] hover:text-[#00CCFF] transition-colors duration-300 text-sm"
