@@ -96,7 +96,7 @@ export default function SocialBottomBar() {
       {/* Mobile Layout - Completamente ricreato */}
       <div className="sm:hidden">
         {/* Top Row - Social Icons Centered */}
-        <div className="flex items-center justify-center space-x-4 pt-1 pb-0 -mb-1">
+        <div className="flex items-center justify-center space-x-4 pt-1 pb-0 -mb-1 w-full max-w-xs mx-auto">
           {/* X/Twitter */}
           <a
             href="https://x.com/Zodia_agent"
@@ -133,12 +133,12 @@ export default function SocialBottomBar() {
         </div>
 
         {/* Separator Line */}
-        <div className="h-px bg-gradient-to-r from-transparent via-[#00CCFF]/30 to-transparent mx-4"></div>
+        <div className="h-px bg-gradient-to-r from-transparent via-[#00CCFF]/30 to-transparent mx-4 -mt-0.5"></div>
 
         {/* Bottom Row - Contract Left, Email Right */}
-        <div className="flex items-center justify-between px-4 py-1">
+        <div className="flex items-center justify-between px-4 py-0">
           {/* Contract - Left */}
-          <div className="flex items-center space-x-1">
+          <div className="flex items-center space-x-0.5">
             <span className="text-[#E6F3FF]/70 text-xs font-trajan">
               Contract:
             </span>
@@ -149,7 +149,7 @@ export default function SocialBottomBar() {
               size="sm"
               variant="ghost"
               onClick={handleCopyContract}
-              className="text-[#00CCFF]/70 hover:text-[#00CCFF] hover:bg-[#00CCFF]/5 transition-all duration-300 font-trajan px-1 py-0.5 text-xs"
+              className="text-[#00CCFF]/70 hover:text-[#00CCFF] hover:bg-[#00CCFF]/5 transition-all duration-300 font-trajan px-0.5 py-0 text-xs"
             >
               {copied ? "✓" : "Copy"}
             </Button>
