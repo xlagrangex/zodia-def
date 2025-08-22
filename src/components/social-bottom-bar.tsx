@@ -136,7 +136,7 @@ export default function SocialBottomBar() {
         <div className="h-px bg-gradient-to-r from-transparent via-[#00CCFF]/30 to-transparent mx-4"></div>
 
         {/* Bottom Row - Contract Left, Email Right */}
-        <div className="flex items-center justify-between px-4 py-1.5">
+        <div className="flex items-center justify-between px-4 py-1">
           {/* Contract - Left */}
           <div className="flex items-center space-x-1">
             <span className="text-[#E6F3FF]/70 text-xs font-trajan">
