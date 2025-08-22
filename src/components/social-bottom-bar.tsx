@@ -7,7 +7,7 @@ export default function SocialBottomBar() {
   const [copied, setCopied] = useState(false)
   
   // Placeholder contract address sostituire con l'indirizzo reale
-  const contractAddress = "0xd7f25f215069864b8e0349d5d6536d2c2121de61"
+  const contractAddress = "0xE1270268Fa6FcEF965958Bf2F24e09d70Deed06f"
   
   const handleCopyContract = async () => {
     try {
@@ -57,7 +57,7 @@ export default function SocialBottomBar() {
 
             {/* DeXtools */}
             <a
-              href="https://dexscreener.com/ethereum/0xd7f25f215069864b8e0349d5d6536d2c2121de61"
+              href="https://dexscreener.com/ethereum/0xE1270268Fa6FcEF965958Bf2F24e09d70Deed06f"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#E6F3FF] hover:text-[#00CCFF] transition-colors duration-300 p-1 sm:p-1.5 rounded-md hover:bg-[#00CCFF]/10"
