@@ -41,6 +41,16 @@ export default function SocialBottomBar() {
             </Button>
           </div>
 
+          {/* Email Section - Center */}
+          <div className="flex items-center">
+            <a
+              href="mailto:hello@zodia.world"
+              className="text-[#E6F3FF] hover:text-[#00CCFF] transition-colors duration-300 text-xs sm:text-sm font-trajan"
+            >
+              hello@zodia.world
+            </a>
+          </div>
+
           {/* Social Links */}
           <div className="flex items-center -space-x-2 sm:space-x-3">
             {/* X/Twitter */}
@@ -57,7 +67,7 @@ export default function SocialBottomBar() {
 
             {/* DeXtools */}
             <a
-              href="https://dexscreener.com/ethereum/0xE1270268Fa6FcEF965958Bf2F24e09d70Deed06f"
+              href="https://www.dextools.io/app/ethereum/pair-explorer/0xE1270268Fa6FcEF965958Bf2F24e09d70Deed06f"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#E6F3FF] hover:text-[#00CCFF] transition-colors duration-300 p-1 sm:p-1.5 rounded-md hover:bg-[#00CCFF]/10"
